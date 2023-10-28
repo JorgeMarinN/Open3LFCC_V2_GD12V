@@ -1,0 +1,37 @@
+v {xschem version=3.4.0 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 120 -60 120 60 {}
+L 4 -120 -60 -120 60 {}
+L 4 -120 -60 120 -60 {}
+L 4 -120 60 120 60 {}
+L 7 120 -40 140 -40 {}
+L 7 120 0 140 0 {}
+L 7 120 40 140 40 {}
+L 7 -140 -40 -120 -40 {}
+L 7 -140 0 -120 0 {}
+L 7 0 60 0 80 {}
+L 7 -140 40 -120 40 {}
+B 5 137.5 -42.5 142.5 -37.5 {name=Vboot dir=inout}
+B 5 137.5 -2.5 142.5 2.5 {name=Gate dir=inout}
+B 5 137.5 37.5 142.5 42.5 {name=Source dir=inout}
+B 5 -142.5 -42.5 -137.5 -37.5 {name=V5v0LS dir=inout}
+B 5 -142.5 -2.5 -137.5 2.5 {name=V1v8 dir=inout}
+B 5 -2.5 77.5 2.5 82.5 {name=GND dir=inout}
+B 5 -142.5 37.5 -137.5 42.5 {name=DIN dir=inout}
+T {@symname} -62 -6 0 0 0.3 0.3 {}
+T {@name} 125 -62 0 0 0.2 0.2 {}
+T {Vboot} 115 -44 0 1 0.2 0.2 {}
+T {Gate} 115 -4 0 1 0.2 0.2 {}
+T {Source} 115 36 0 1 0.2 0.2 {}
+T {V5v0LS} -75 -44 0 1 0.2 0.2 {}
+T {V1v8} -85 -4 0 1 0.2 0.2 {}
+T {GND} 15 36 0 1 0.2 0.2 {}
+T {DIN} -95 36 0 1 0.2 0.2 {}

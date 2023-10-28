@@ -1,0 +1,31 @@
+v {xschem version=3.4.0 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -80 -60 20 -60 {}
+L 4 -80 60 20 60 {}
+L 4 -80 -60 -80 60 {}
+L 7 0 -80 0 -60 {}
+L 7 -100 -30 -80 -30 {}
+L 7 -100 30 -80 30 {}
+L 7 80 0 100 0 {}
+L 7 0 60 0 80 {}
+B 5 -2.5 -82.5 2.5 -77.5 {name=VDD dir=inout}
+B 5 -102.5 -32.5 -97.5 -27.5 {name=A dir=inout}
+B 5 -102.5 27.5 -97.5 32.5 {name=B dir=inout}
+B 5 97.5 -2.5 102.5 2.5 {name=NAND dir=inout}
+B 5 -2.5 77.5 2.5 82.5 {name=VSS dir=inout}
+A 4 20 0 60 270 180 {}
+T {@NAND_5V} -59.5 -6 0 0 0.3 0.3 {}
+T {@name} 65 -62 0 0 0.2 0.2 {}
+T {VDD} 15 -54 0 1 0.2 0.2 {}
+T {A} -65 -34 0 1 0.2 0.2 {}
+T {B} -65 26 0 1 0.2 0.2 {}
+T {NAND} 75 -4 0 1 0.2 0.2 {}
+T {VSS} 15 46 0 1 0.2 0.2 {}

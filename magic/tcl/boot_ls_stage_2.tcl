@@ -6,6 +6,8 @@
 #   29-10-2023        	#
 # #####################	#
 
+# VERSION CON 2 FINGERS
+
 drc style drc(full)
 
 
@@ -18,14 +20,14 @@ set wire_w 0.5
 # Transistors M4 and M5 
 # -------------------------------------
 # Devices
-set n_fingers 4
-set pmos_w 2.5
+set n_fingers 2
+set pmos_w 5
 set down [expr {$basey + $wire_w + 0.34}]
 set up [expr {$down + $pmos_w}]
 set right [expr {$basex+1.29*$n_fingers/2+0.145}]
 set left [expr {$basex-($right-$basex)}]
 box [expr {$left-0.33}]um [expr {$down-0.33}]um [expr {$left+0.67}]um [expr {$down+0.67}]um
-getcell pfet_5v_4x2u5_1u.mag
+getcell pfet_5v_2x5u_1u.mag
 
 
 # Drain
@@ -41,44 +43,28 @@ box [expr {$basex-1.04}]um [expr {$basey+$wire_w+0.07}]um [expr {$basex-1.54}]um
 paint metal1
 box [expr {$basex-1.14}]um [expr {$basey+$wire_w-0.03}]um [expr {$basex-1.44}]um [expr {$basey+0.17}]um
 paint m2contact
-box [expr {$left}]um [expr {$basey+0.07}]um [expr {$right}]um [expr {$basey+$wire_w+0.07}]um
+box [expr {$left-1}]um [expr {$basey+0.07}]um [expr {$right+1}]um [expr {$basey+$wire_w+0.07}]um
 paint metal2
-box [expr {$left}]um [expr {$basey-0.07}]um [expr {$right}]um [expr {$basey-$wire_w-0.07}]um
+box [expr {$left-1}]um [expr {$basey-0.07}]um [expr {$right+1}]um [expr {$basey-$wire_w-0.07}]um
 paint metal2
 
 
 # Gate
 box [expr {$basex+0.255}]um [expr {$basey+0.07}]um [expr {$basex+1.035}]um [expr {$down}]um
 paint poly
-box [expr {$basex+1.545}]um [expr {$basey+0.07}]um [expr {$basex+2.325}]um [expr {$down}]um
-paint poly
 box [expr {$basex+0.255}]um [expr {$basey+0.07}]um [expr {$basex+1.035}]um [expr {$basey+$wire_w+0.07}]um
-paint {locali, metal1}
-box [expr {$basex+1.545}]um [expr {$basey+0.07}]um [expr {$basex+2.325}]um [expr {$basey+$wire_w+0.07}]um
 paint {locali, metal1}
 box [expr {$basex+0.355}]um [expr {$basey+0.17}]um [expr {$basex+0.935}]um [expr {$basey+$wire_w-0.03}]um
 paint {pcontact, viali, m2contact}
-box [expr {$basex+1.645}]um [expr {$basey+0.17}]um [expr {$basex+2.225}]um [expr {$basey+$wire_w-0.03}]um
-paint {pcontact, viali, m2contact}
 box [expr {$basex-0.255}]um [expr {$basey+0.07}]um [expr {$basex-1.035}]um [expr {$down}]um
-paint poly
-box [expr {$basex-1.545}]um [expr {$basey+0.07}]um [expr {$basex-2.325}]um [expr {$down}]um
 paint poly
 box [expr {$basex-0.355}]um [expr {$basey+0.17}]um [expr {$basex-0.935}]um [expr {$basey+$wire_w-0.03}]um
 paint {pcontact}
-box [expr {$basex-1.645}]um [expr {$basey+0.17}]um [expr {$basex-2.225}]um [expr {$basey+$wire_w-0.03}]um
-paint {pcontact}
 box [expr {$basex-0.255}]um [expr {$basey-$wire_w-0.07}]um [expr {$basex-1.035}]um [expr {$basey+$wire_w+0.07}]um
-paint {locali}
-box [expr {$basex-1.545}]um [expr {$basey-$wire_w-0.07}]um [expr {$basex-2.325}]um [expr {$basey+$wire_w+0.07}]um
 paint {locali}
 box [expr {$basex-0.255}]um [expr {$basey-$wire_w-0.07}]um [expr {$basex-1.035}]um [expr {$basey-0.07}]um
 paint {metal1}
-box [expr {$basex-1.545}]um [expr {$basey-$wire_w-0.07}]um [expr {$basex-2.325}]um [expr {$basey-0.07}]um
-paint {metal1}
 box [expr {$basex-0.355}]um [expr {$basey-$wire_w+0.03}]um [expr {$basex-0.935}]um [expr {$basey-0.17}]um
-paint {viali, m2contact}
-box [expr {$basex-1.645}]um [expr {$basey-$wire_w+0.03}]um [expr {$basex-2.225}]um [expr {$basey-0.17}]um
 paint {viali, m2contact}
 
 
@@ -114,14 +100,25 @@ paint {metal1}
 # Devices
 set n_fingers 1
 set pmos_w 0.5
-set down [expr {$up - $pmos_w}]
-box [expr {$right+0.62}]um [expr {$down-0.33}]um [expr {$right+1.62}]um [expr {$down+0.67}]um
+set up [expr {$down + $pmos_w}]
+#set down [expr {$up - $pmos_w}]
+box [expr {$right+0.615}]um [expr {$down-0.33}]um [expr {$right+1.62}]um [expr {$down+0.67}]um
 getcell pfet_5v_1x0u5_1u.mag
 set cell_w [expr {([lindex [box size] 0]+0.0)/200}]
-box [expr {$left-$cell_w-0.62}]um [expr {$down-0.33}]um [expr {$left-$cell_w+0.38}]um [expr {$down+0.67}]um
+box [expr {$left-$cell_w-0.615}]um [expr {$down-0.33}]um [expr {$left-$cell_w+0.375}]um [expr {$down+0.67}]um
 getcell pfet_5v_1x0u5_1u.mag
 
+box [expr {$right+2.495}]um [expr {$down-0.33}]um [expr {$right+3.495}]um [expr {$down+0.67}]um
+getcell pfet_5v_1x1u_0u5.mag
+set cell_w [expr {([lindex [box size] 0]+0.0)/200}]
+box [expr {$left-$cell_w-2.495}]um [expr {$down-0.33}]um [expr {$left-$cell_w+1.495}]um [expr {$down+0.67}]um
+getcell pfet_5v_1x1u_0u5.mag
 
+
+# -------------------------------------
+# Transistors M8 and M10 
+# -------------------------------------
+box [expr {$right+3.005}]um [expr {$basey+4.93}]um [expr {$right+4.005}]um [expr {$basey+5.93}]um
 getcell pfet_5v_1x1u_0u5.mag
 
 # -------------------------------------

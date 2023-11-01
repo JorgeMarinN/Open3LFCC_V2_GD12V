@@ -276,7 +276,7 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_g5v0d10v5.sym} 620 -230 0 0 {name=M19
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} 620 -230 0 0 {name=M1
 L=0.5
 W=6
 nf=1
@@ -290,7 +290,7 @@ sa=0 sb=0 sd=0
 model=nfet_g5v0d10v5
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_g5v0d10v5.sym} 820 -230 0 1 {name=M1
+C {sky130_fd_pr/nfet_g5v0d10v5.sym} 820 -230 0 1 {name=M2
 L=0.5
 W=6
 nf=1

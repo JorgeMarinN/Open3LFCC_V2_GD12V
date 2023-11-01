@@ -1,0 +1,396 @@
+magic
+tech sky130A
+timestamp 1698868607
+use mimcap_30x30  mimcap_30x30_0
+timestamp 1662145021
+transform 1 0 0 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_1
+timestamp 1662145021
+transform 1 0 3190 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_2
+timestamp 1662145021
+transform 1 0 6380 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_3
+timestamp 1662145021
+transform 1 0 9570 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_4
+timestamp 1662145021
+transform 1 0 12760 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_5
+timestamp 1662145021
+transform 1 0 15950 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_6
+timestamp 1662145021
+transform 1 0 19140 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_7
+timestamp 1662145021
+transform 1 0 22330 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_8
+timestamp 1662145021
+transform 1 0 25520 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_9
+timestamp 1662145021
+transform 1 0 28710 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_10
+timestamp 1662145021
+transform 1 0 31900 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_11
+timestamp 1662145021
+transform 1 0 35090 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_12
+timestamp 1662145021
+transform 1 0 38280 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_13
+timestamp 1662145021
+transform 1 0 41470 0 1 0
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_14
+timestamp 1662145021
+transform 1 0 0 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_15
+timestamp 1662145021
+transform 1 0 3190 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_16
+timestamp 1662145021
+transform 1 0 6380 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_17
+timestamp 1662145021
+transform 1 0 9570 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_18
+timestamp 1662145021
+transform 1 0 12760 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_19
+timestamp 1662145021
+transform 1 0 15950 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_20
+timestamp 1662145021
+transform 1 0 19140 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_21
+timestamp 1662145021
+transform 1 0 22330 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_22
+timestamp 1662145021
+transform 1 0 25520 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_23
+timestamp 1662145021
+transform 1 0 28710 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_24
+timestamp 1662145021
+transform 1 0 31900 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_25
+timestamp 1662145021
+transform 1 0 35090 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_26
+timestamp 1662145021
+transform 1 0 38280 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_27
+timestamp 1662145021
+transform 1 0 41470 0 1 3190
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_28
+timestamp 1662145021
+transform 1 0 0 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_29
+timestamp 1662145021
+transform 1 0 3190 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_30
+timestamp 1662145021
+transform 1 0 6380 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_31
+timestamp 1662145021
+transform 1 0 9570 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_32
+timestamp 1662145021
+transform 1 0 12760 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_33
+timestamp 1662145021
+transform 1 0 15950 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_34
+timestamp 1662145021
+transform 1 0 19140 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_35
+timestamp 1662145021
+transform 1 0 22330 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_36
+timestamp 1662145021
+transform 1 0 25520 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_37
+timestamp 1662145021
+transform 1 0 28710 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_38
+timestamp 1662145021
+transform 1 0 31900 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_39
+timestamp 1662145021
+transform 1 0 35090 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_40
+timestamp 1662145021
+transform 1 0 38280 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_41
+timestamp 1662145021
+transform 1 0 41470 0 1 6380
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_42
+timestamp 1662145021
+transform 1 0 0 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_43
+timestamp 1662145021
+transform 1 0 3190 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_44
+timestamp 1662145021
+transform 1 0 6380 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_45
+timestamp 1662145021
+transform 1 0 9570 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_46
+timestamp 1662145021
+transform 1 0 12760 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_47
+timestamp 1662145021
+transform 1 0 15950 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_48
+timestamp 1662145021
+transform 1 0 19140 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_49
+timestamp 1662145021
+transform 1 0 22330 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_50
+timestamp 1662145021
+transform 1 0 25520 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_51
+timestamp 1662145021
+transform 1 0 28710 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_52
+timestamp 1662145021
+transform 1 0 31900 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_53
+timestamp 1662145021
+transform 1 0 35090 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_54
+timestamp 1662145021
+transform 1 0 38280 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_55
+timestamp 1662145021
+transform 1 0 41470 0 1 9570
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_56
+timestamp 1662145021
+transform 1 0 0 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_57
+timestamp 1662145021
+transform 1 0 3190 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_58
+timestamp 1662145021
+transform 1 0 6380 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_59
+timestamp 1662145021
+transform 1 0 9570 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_60
+timestamp 1662145021
+transform 1 0 12760 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_61
+timestamp 1662145021
+transform 1 0 15950 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_62
+timestamp 1662145021
+transform 1 0 19140 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_63
+timestamp 1662145021
+transform 1 0 22330 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_64
+timestamp 1662145021
+transform 1 0 25520 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_65
+timestamp 1662145021
+transform 1 0 28710 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_66
+timestamp 1662145021
+transform 1 0 31900 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_67
+timestamp 1662145021
+transform 1 0 35090 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_68
+timestamp 1662145021
+transform 1 0 38280 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_69
+timestamp 1662145021
+transform 1 0 41470 0 1 12760
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_70
+timestamp 1662145021
+transform 1 0 0 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_71
+timestamp 1662145021
+transform 1 0 3190 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_72
+timestamp 1662145021
+transform 1 0 6380 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_73
+timestamp 1662145021
+transform 1 0 9570 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_74
+timestamp 1662145021
+transform 1 0 12760 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_75
+timestamp 1662145021
+transform 1 0 15950 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_76
+timestamp 1662145021
+transform 1 0 19140 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_77
+timestamp 1662145021
+transform 1 0 22330 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_78
+timestamp 1662145021
+transform 1 0 25520 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_79
+timestamp 1662145021
+transform 1 0 28710 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_80
+timestamp 1662145021
+transform 1 0 31900 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_81
+timestamp 1662145021
+transform 1 0 35090 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_82
+timestamp 1662145021
+transform 1 0 38280 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_83
+timestamp 1662145021
+transform 1 0 41470 0 1 15950
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_84
+timestamp 1662145021
+transform 1 0 0 0 1 19140
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_85
+timestamp 1662145021
+transform 1 0 3190 0 1 19140
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_86
+timestamp 1662145021
+transform 1 0 6380 0 1 19140
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_87
+timestamp 1662145021
+transform 1 0 9570 0 1 19140
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_88
+timestamp 1662145021
+transform 1 0 12760 0 1 19140
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_89
+timestamp 1662145021
+transform 1 0 15950 0 1 19140
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_90
+timestamp 1662145021
+transform 1 0 19140 0 1 19140
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_91
+timestamp 1662145021
+transform 1 0 22330 0 1 19140
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_92
+timestamp 1662145021
+transform 1 0 25520 0 1 19140
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_93
+timestamp 1662145021
+transform 1 0 28710 0 1 19140
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_94
+timestamp 1662145021
+transform 1 0 31900 0 1 19140
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_95
+timestamp 1662145021
+transform 1 0 35090 0 1 19140
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_96
+timestamp 1662145021
+transform 1 0 38280 0 1 19140
+box 0 0 3190 3190
+use mimcap_30x30  mimcap_30x30_97
+timestamp 1662145021
+transform 1 0 41470 0 1 19140
+box 0 0 3190 3190
+<< end >>

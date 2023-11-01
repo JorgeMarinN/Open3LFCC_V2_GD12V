@@ -37,17 +37,17 @@ lab=#net2}
 N 460 -260 460 -140 {
 lab=#net2}
 N 400 -140 400 -110 {
-lab=VL}
+lab=VSS}
 N 380 -140 400 -140 {
-lab=VL}
+lab=VSS}
 N 220 -140 240 -140 {
-lab=VL}
+lab=VSS}
 N 240 -140 240 -110 {
-lab=VL}
+lab=VSS}
 N 520 -140 540 -140 {
-lab=VL}
+lab=VSS}
 N 540 -140 540 -110 {
-lab=VL}
+lab=VSS}
 N 380 -210 460 -210 {
 lab=#net2}
 N 250 -190 320 -260 {
@@ -63,7 +63,7 @@ lab=#net2}
 N 100 -290 540 -290 {
 lab=VDD}
 N 100 -110 540 -110 {
-lab=VL}
+lab=VSS}
 N 180 -140 180 -50 {
 lab=Q}
 N 340 -140 340 -50 {
@@ -100,9 +100,9 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 500 -260 0 0 {name=M17
 L=0.5
-W=3
+W=10.84
 nf=1
-mult=65
+mult=18
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -142,9 +142,9 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 500 -140 0 0 {name=M18
 L=0.5
-W=3
+W=4
 nf=1
-mult=24
+mult=18
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 

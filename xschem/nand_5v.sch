@@ -37,9 +37,9 @@ N 160 -240 160 -200 {
 lab=NAND}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 140 -110 0 0 {name=M25
 L=3
-W=0.5
+W=5
 nf=1
-mult=10
+mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -51,9 +51,9 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 140 -170 0 0 {name=M26
 L=3
-W=0.5
+W=5
 nf=1
-mult=10
+mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -65,9 +65,9 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 60 -270 0 0 {name=M27
 L=3
-W=0.5
+W=5
 nf=1
-mult=10
+mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -79,9 +79,9 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 220 -270 0 0 {name=M28
 L=3
-W=0.5
+W=5
 nf=1
-mult=10
+mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 

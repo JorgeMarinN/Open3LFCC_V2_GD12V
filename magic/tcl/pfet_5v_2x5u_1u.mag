@@ -1,0 +1,55 @@
+magic
+tech sky130A
+timestamp 1698696303
+<< nwell >>
+rect -15 -2 338 564
+<< mvpmos >>
+rect 47 31 147 531
+rect 176 31 276 531
+<< mvpdiff >>
+rect 18 525 47 531
+rect 18 37 24 525
+rect 41 37 47 525
+rect 18 31 47 37
+rect 147 525 176 531
+rect 147 37 153 525
+rect 170 37 176 525
+rect 147 31 176 37
+rect 276 525 305 531
+rect 276 37 282 525
+rect 299 37 305 525
+rect 276 31 305 37
+<< mvpdiffc >>
+rect 24 37 41 525
+rect 153 37 170 525
+rect 282 37 299 525
+<< poly >>
+rect 47 531 147 544
+rect 176 531 276 544
+rect 47 18 147 31
+rect 176 18 276 31
+<< locali >>
+rect 24 525 41 533
+rect 24 29 41 37
+rect 153 525 170 533
+rect 153 29 170 37
+rect 282 525 299 533
+rect 282 29 299 37
+<< viali >>
+rect 24 37 41 525
+rect 153 37 170 525
+rect 282 37 299 525
+<< metal1 >>
+rect 21 525 44 531
+rect 21 37 24 525
+rect 41 37 44 525
+rect 21 31 44 37
+rect 150 525 173 531
+rect 150 37 153 525
+rect 170 37 173 525
+rect 150 31 173 37
+rect 279 525 302 531
+rect 279 37 282 525
+rect 299 37 302 525
+rect 279 31 302 37
+<< end >>

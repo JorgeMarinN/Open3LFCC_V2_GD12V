@@ -14,5 +14,8 @@ getcell boot_ls_stage.mag
 
 getcell buffer.mag
 
+getcell mimcap_210x420.mag
+
+getcell nand_5v.mag
 
 #save driver_bootstrap.mag

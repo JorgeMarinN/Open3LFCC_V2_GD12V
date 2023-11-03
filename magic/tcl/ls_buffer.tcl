@@ -89,8 +89,6 @@ box [expr {$left-0.17}]um [expr {$down}]um [expr {$left-0.57}]um [expr {$up+0.67
 paint {metal1}
 box [expr {$left-1}]um [expr {$down-0.33}]um [expr {$right+1}]um [expr {$up+1}]um
 paint nwell
-box [expr {$left-0.4}]um [expr {$basey+1}]um [expr {$left-1.5}]um [expr {$basey+1.5}]um
-paint metal1
 
 
 # NMOS
@@ -156,43 +154,12 @@ box [expr {$left-0.67}]um [expr {$down-0.84}]um [expr {$right+0.67}]um [expr {$d
 paint {metal1}
 
 
-set up [expr {$up+0.34}]
-set down [expr {$down-1.27}]
-set right [expr {$right+0.805}]
-set left [expr {$left-0.805}]
-box [expr {$left-1.43}]um [expr {$down-1.43}]um [expr {$right+1.43}]um [expr {$up+1.43}]um
-paint nwell
-box [expr {$left}]um [expr {$down}]um [expr {$right}]um [expr {$up}]um
-paint pwell
-box [expr {$left-1.03}]um [expr {$down-1.03}]um [expr {$right+1.03}]um [expr {$up+1.03}]um
-paint dnwell
-
-
-# Second Guard Ring
-box [expr {$left-0.63}]um [expr {$down}]um [expr {$left-0.83}]um [expr {$up-0.35}]um
-paint {mvnsubstratendiff, locali}
-box [expr {$left-0.63}]um [expr {$down+0.15}]um [expr {$left-0.83}]um [expr {$up-0.5}]um
-paint {mvnsubstratencontact, viali}
-box [expr {$left-0.53}]um [expr {$down-0.67}]um [expr {$left-1.03}]um [expr {$basey+1.5}]um
-paint {metal1}
-box [expr {$left-0.53}]um [expr {$basey+1}]um [expr {$left}]um [expr {$basey+1.5}]um
-paint metal1
-box [expr {$left}]um [expr {$down-0.63}]um [expr {$right-0.90}]um [expr {$down-0.83}]um
-paint {mvnsubstratendiff, locali}
-box [expr {$left+0.15}]um [expr {$down-0.63}]um [expr {$right-1.05}]um [expr {$down-0.83}]um
-paint mvnsubstratencontact
-box [expr {$left+0.15}]um [expr {$down-0.63}]um [expr {$right-1.05}]um [expr {$down-0.83}]um
-paint viali
-box [expr {$left-1.03}]um [expr {$down-0.53}]um [expr {$right-0.90}]um [expr {$down-1.03}]um
-paint metal1
-
-
 
 
 # -------------------------------------
 # Output Stage of the Buffer (Inverter)
 # -------------------------------------
-set basex 9.33
+set basex 9.26
 set basey 0
 set wire_w 0.5
 
@@ -264,89 +231,53 @@ for {set i 0} {$i < [expr {$n_fingers/2 + 1}]} {incr i} {
 
 
 # Taps
-box [expr {$left}]um [expr {$up_p+0.27}]um [expr {$right}]um [expr {$up_p+0.67}]um
+box [expr {$left}]um [expr {$up_p+0.27}]um [expr {$right}]um [expr {$up_p+0.47}]um
 paint {mvnsubstratendiff, locali}
-box [expr {$left+0.15}]um [expr {$up_p+0.37}]um [expr {$right-0.15}]um [expr {$up_p+0.57}]um
+box [expr {$left+0.15}]um [expr {$up_p+0.27}]um [expr {$right-0.15}]um [expr {$up_p+0.47}]um
 paint {mvnsubstratencontact, viali}
-box [expr {$left-0.77}]um [expr {$up_p+0.27}]um [expr {$right+0.77}]um [expr {$up_p+1.27}]um
+box [expr {$left-0.57}]um [expr {$up_p+0.17}]um [expr {$right+0.57}]um [expr {$up_p+0.57}]um
 paint {metal1}
-box [expr {$left-0.77}]um [expr {$up_p+0.77}]um [expr {$left-0.27}]um [expr {$up_p+1.27}]um
+box [expr {$right+0.27}]um [expr {$down_p}]um [expr {$right+0.47}]um [expr {$up_p}]um
+paint {mvnsubstratendiff, locali}
+box [expr {$right+0.27}]um [expr {$down_p+0.15}]um [expr {$right+0.47}]um [expr {$up_p-0.15}]um
+paint {mvnsubstratencontact, viali}
+box [expr {$right-0.03}]um [expr {$down_p}]um [expr {$right+0.57}]um [expr {$up_p+0.57}]um
+paint {metal1}
+box [expr {$left-0.27}]um [expr {$down_p}]um [expr {$left-0.47}]um [expr {$up_p}]um
+paint {mvnsubstratendiff, locali}
+box [expr {$left-0.27}]um [expr {$down_p+0.15}]um [expr {$left-0.47}]um [expr {$up_p-0.15}]um
+paint {mvnsubstratencontact, viali}
+box [expr {$left+0.03}]um [expr {$down_p}]um [expr {$left-0.57}]um [expr {$up_p+0.57}]um
+paint {metal1}
+box [expr {$left-0.9}]um [expr {$down_p-0.33}]um [expr {$right+0.9}]um [expr {$up_p+0.9}]um
+paint nwell
+box [expr {$left-0.07}]um [expr {$up_p+0.07}]um [expr {$left-0.57}]um [expr {$up_p+0.57}]um
 label VDD north metal1
-box [expr {$right+0.27}]um [expr {$down_p}]um [expr {$right+0.67}]um [expr {$up_p}]um
-paint {mvnsubstratendiff, locali}
-box [expr {$right+0.37}]um [expr {$down_p+0.15}]um [expr {$right+0.57}]um [expr {$up_p-0.15}]um
-paint {mvnsubstratencontact, viali}
-box [expr {$right-0.03}]um [expr {$down_p}]um [expr {$right+0.77}]um [expr {$up_p+0.67}]um
-paint {metal1}
-box [expr {$left-0.27}]um [expr {$down_p}]um [expr {$left-0.67}]um [expr {$up_p}]um
-paint {mvnsubstratendiff, locali}
-box [expr {$left-0.37}]um [expr {$down_p+0.15}]um [expr {$left-0.57}]um [expr {$up_p-0.15}]um
-paint {mvnsubstratencontact, viali}
-box [expr {$left+0.03}]um [expr {$down_p}]um [expr {$left-0.77}]um [expr {$up_p+0.67}]um
-paint {metal1}
-box [expr {$left-1}]um [expr {$down_p-0.33}]um [expr {$right+1}]um [expr {$up_p+1}]um
-paint nwell
 
-box [expr {$right+0.37}]um [expr {$down_n}]um [expr {$right+0.77}]um [expr {$up_n}]um
+box [expr {$right+0.37}]um [expr {$down_n}]um [expr {$right+0.57}]um [expr {$up_n}]um
 paint {mvpsubstratepdiff}
-box [expr {$right+0.37}]um [expr {$down_n}]um [expr {$right+0.77}]um [expr {$up_n}]um
+box [expr {$right+0.37}]um [expr {$down_n}]um [expr {$right+0.57}]um [expr {$up_n}]um
 paint {locali}
-box [expr {$right+0.47}]um [expr {$down_n+0.15}]um [expr {$right+0.67}]um [expr {$up_n-0.15}]um
+box [expr {$right+0.37}]um [expr {$down_n+0.15}]um [expr {$right+0.57}]um [expr {$up_n-0.15}]um
 paint {mvpsubstratepcontact, viali}
-box [expr {$right-0.03}]um [expr {$down_n-0.86}]um [expr {$right+0.77}]um [expr {$up_n}]um
+box [expr {$right-0.03}]um [expr {$down_n-0.66}]um [expr {$right+0.67}]um [expr {$up_n}]um
 paint {metal1}
-box [expr {$left-0.37}]um [expr {$down_n}]um [expr {$left-0.77}]um [expr {$up_n}]um
+box [expr {$left-0.37}]um [expr {$down_n}]um [expr {$left-0.57}]um [expr {$up_n}]um
 paint {mvpsubstratepdiff}
-box [expr {$left-0.37}]um [expr {$down_n}]um [expr {$left-0.77}]um [expr {$up_n}]um
+box [expr {$left-0.37}]um [expr {$down_n}]um [expr {$left-0.57}]um [expr {$up_n}]um
 paint {locali}
-box [expr {$left-0.47}]um [expr {$down_n+0.15}]um [expr {$left-0.67}]um [expr {$up_n-0.15}]um
+box [expr {$left-0.37}]um [expr {$down_n+0.15}]um [expr {$left-0.57}]um [expr {$up_n-0.15}]um
 paint {mvpsubstratepcontact, viali}
-box [expr {$left+0.03}]um [expr {$down_n-0.86}]um [expr {$left-0.77}]um [expr {$up_n}]um
+box [expr {$left+0.03}]um [expr {$down_n-0.66}]um [expr {$left-0.67}]um [expr {$up_n}]um
 paint {metal1}
-box [expr {$left}]um [expr {$down_n-0.37}]um [expr {$right}]um [expr {$down_n-0.77}]um
+box [expr {$left}]um [expr {$down_n-0.37}]um [expr {$right}]um [expr {$down_n-0.57}]um
 paint {mvpsubstratepdiff, locali}
-box [expr {$left+0.15}]um [expr {$down_n-0.47}]um [expr {$right-0.15}]um [expr {$down_n-0.67}]um
+box [expr {$left+0.15}]um [expr {$down_n-0.37}]um [expr {$right-0.15}]um [expr {$down_n-0.57}]um
 paint {mvpsubstratepcontact, viali}
-box [expr {$left-0.77}]um [expr {$down_n-0.37}]um [expr {$right+0.77}]um [expr {$down_n-0.87}]um
+box [expr {$left-0.67}]um [expr {$down_n-0.27}]um [expr {$right+0.67}]um [expr {$down_n-0.67}]um
 paint {metal1}
-box [expr {$left-0.77}]um [expr {$down_n-0.37}]um [expr {$left-0.27}]um [expr {$down_n-0.87}]um
+box [expr {$left-0.67}]um [expr {$down_n-0.17}]um [expr {$left-0.17}]um [expr {$down_n-0.67}]um
 label VSS south metal1
-
-set up [expr {$up_n+0.34}]
-set down [expr {$down_n-0.9}]
-set right [expr {$right+0.905}]
-set left [expr {$left-0.905}]
-box [expr {$left}]um [expr {$down-1.43}]um [expr {$right+1.43}]um [expr {$up+1.43}]um
-paint nwell
-box [expr {$left}]um [expr {$down}]um [expr {$right}]um [expr {$up}]um
-paint pwell
-box [expr {$left-1.03}]um [expr {$down-1.03}]um [expr {$right+1.03}]um [expr {$up+1.03}]um
-paint dnwell
-
-
-# Second Guard Ring
-box [expr {$right+0.63}]um [expr {$down}]um [expr {$right+1.03}]um [expr {$down_p+0.5}]um
-paint locali
-box [expr {$right+0.63}]um [expr {$down}]um [expr {$right+1.03}]um [expr {$up-0.35}]um
-paint mvnsubstratendiff
-box [expr {$right+0.73}]um [expr {$down+0.15}]um [expr {$right+0.93}]um [expr {$up-0.5}]um
-paint {mvnsubstratencontact, viali}
-box [expr {$right+0.63}]um [expr {$down-0.67}]um [expr {$right+1.13}]um [expr {$up-0.35}]um
-paint {metal1}
-box [expr {$right+0.63}]um [expr {$down_p}]um [expr {$right-0.24}]um [expr {$down_p+0.5}]um
-paint locali
-box [expr {$left}]um [expr {$down-0.63}]um [expr {$right}]um [expr {$down-1.03}]um
-paint {mvnsubstratendiff, locali}
-box [expr {$left+0.15}]um [expr {$down-0.73}]um [expr {$right-0.15}]um [expr {$down-0.93}]um
-paint mvnsubstratencontact
-box [expr {$left+0.15}]um [expr {$down-0.73}]um [expr {$right-0.15}]um [expr {$down-0.93}]um
-paint viali
-box [expr {$left-0.83}]um [expr {$down-0.63}]um [expr {$right+1.13}]um [expr {$down-1.13}]um
-paint metal1
-box [expr {$left-0.83}]um [expr {$down-0.4}]um [expr {$left-0.33}]um [expr {$down-1.13}]um
-paint metal1
-box [expr {$left-1.43}]um [expr {$down-1.43}]um [expr {$left}]um [expr {$down}]um
-paint nwell
 
 
 

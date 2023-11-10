@@ -1,0 +1,45 @@
+* NGSPICE file created from buffer.ext - technology: sky130A
+
+.subckt buffer
+X0 VDD a_n137_16# out VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X1 VDD a_n137_16# out VDD sky130_fd_pr__pfet_g5v0d10v5 ad=3.14 pd=22.3 as=1.57 ps=11.1 w=10.8 l=0.5
+X2 out a_n137_16# VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X3 VSS Q a_n195_154# VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.435 pd=3.29 as=0.87 ps=6.58 w=3 l=0.5
+X4 VSS a_n137_16# out VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X5 out a_n137_16# VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X6 out a_n137_16# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X7 out a_n137_16# VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X8 out a_n137_16# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X9 a_n137_16# a_n195_154# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.87 pd=6.58 as=0.475 ps=3.37 w=3 l=0.5
+X10 VSS a_n137_16# out VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X11 VSS a_n137_16# out VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X12 out a_n137_16# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X13 VSS a_n137_16# out VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X14 VDD a_n137_16# out VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X15 out a_n137_16# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X16 out a_n137_16# VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X17 VDD a_n137_16# a_n195_154# VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.475 pd=3.37 as=0.29 ps=2.58 w=1 l=0.5
+X18 VDD a_n137_16# out VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X19 out a_n137_16# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X20 out a_n137_16# VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X21 out a_n137_16# VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X22 VDD a_n137_16# out VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X23 out a_n137_16# VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=1.16 ps=8.58 w=4 l=0.5
+X24 out a_n137_16# VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X25 VDD a_n137_16# out VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X26 out a_n137_16# VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X27 VSS a_n137_16# out VSS sky130_fd_pr__nfet_g5v0d10v5 ad=1.16 pd=8.58 as=0.58 ps=4.29 w=4 l=0.5
+X28 VDD a_n137_16# out VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X29 a_n137_16# QN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.87 pd=6.58 as=0.435 ps=3.29 w=3 l=0.5
+X30 VSS a_n137_16# out VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X31 VSS a_n137_16# out VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X32 out a_n137_16# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X33 out a_n137_16# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X34 VDD a_n137_16# out VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X35 VSS a_n137_16# out VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+X36 VDD a_n137_16# out VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X37 out a_n137_16# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=3.14 ps=22.3 w=10.8 l=0.5
+X38 out a_n137_16# VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.57 pd=11.1 as=1.57 ps=11.1 w=10.8 l=0.5
+X39 VSS a_n137_16# out VSS sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=0.5
+.ends
+

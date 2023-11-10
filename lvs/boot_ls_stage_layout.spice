@@ -1,0 +1,29 @@
+* NGSPICE file created from boot_ls_stage.ext - technology: sky130A
+
+.subckt boot_ls_stage
+X0 VDD RESET RESET VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
+X1 w_n1158_n782# Iref GND GND sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=0.58 ps=4.29 w=4 l=2
+X2 VDD RESET w_n1370_986# VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+X3 w_n1158_n782# VFE RESET w_n1158_n782# sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=0.5
+X4 GND Iref w_n1158_n782# GND sky130_fd_pr__nfet_g5v0d10v5 ad=1.16 pd=8.58 as=0.58 ps=4.29 w=4 l=2
+X5 w_n1158_n782# VRE SET w_n1158_n782# sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=0.5
+X6 RESET VFE w_n1158_n782# w_n1158_n782# sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=0.5
+X7 RESET VFE w_n1158_n782# w_n1158_n782# sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=0.5
+X8 SET SET VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
+X9 SET VRE w_n1158_n782# w_n1158_n782# sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=0.5
+X10 SET SET w_n1370_986# w_n1370_986# sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+X11 w_888_986# RESET RESET w_888_986# sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+X12 w_n1158_n782# VRE SET w_n1158_n782# sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=0.5
+X13 w_n1158_n782# VFE RESET w_n1158_n782# sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=0.5
+X14 w_888_986# SET VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+X15 GND Iref Iref GND sky130_fd_pr__nfet_g5v0d10v5 ad=0.58 pd=4.29 as=1.16 ps=8.58 w=4 l=2
+X16 VDD SET RESET VDD sky130_fd_pr__pfet_g5v0d10v5 ad=0.725 pd=5.29 as=1.45 ps=10.6 w=5 l=1
+X17 SET VRE w_n1158_n782# w_n1158_n782# sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.29 ps=2.58 w=1 l=0.5
+X18 SET RESET VDD VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.45 pd=10.6 as=0.725 ps=5.29 w=5 l=1
+X19 w_n1158_n782# VRE SET w_n1158_n782# sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=0.5
+X20 w_n1158_n782# VFE RESET w_n1158_n782# sky130_fd_pr__nfet_g5v0d10v5 ad=0.29 pd=2.58 as=0.145 ps=1.29 w=1 l=0.5
+X21 SET VRE w_n1158_n782# w_n1158_n782# sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=0.5
+X22 RESET VFE w_n1158_n782# w_n1158_n782# sky130_fd_pr__nfet_g5v0d10v5 ad=0.145 pd=1.29 as=0.145 ps=1.29 w=1 l=0.5
+R1 V5v Iref 170k
+.ends
+

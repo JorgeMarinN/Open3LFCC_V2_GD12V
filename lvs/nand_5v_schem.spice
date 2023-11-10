@@ -1,0 +1,9 @@
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/nand_5v.sch
+.subckt nand_5v VSS VDD A B NAND
+*.PININFO VSS:B VDD:B A:B B:B NAND:B
+XM25 net1 B VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=3 W=5 nf=1 m=1
+XM26 NAND A net1 VSS sky130_fd_pr__nfet_g5v0d10v5 L=3 W=5 nf=1 m=1
+XM27 NAND A VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=3 W=5 nf=1 m=1
+XM28 NAND B VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=3 W=5 nf=1 m=1
+.ends
+.end

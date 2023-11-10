@@ -1,0 +1,18 @@
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/boot_ls_stage.sch
+.subckt boot_ls_stage V5v0LS GND Vboot VFE VRE SET RESET
+*.PININFO V5v0LS:B GND:B Vboot:B VFE:B VRE:B SET:B RESET:B
+XM7 net1 RESET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM8 SET SET net1 net1 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM4 RESET SET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=1 W=5 nf=1 m=1
+XM3 SET SET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+XM9 net3 SET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM10 RESET RESET net3 net3 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM5 SET RESET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=1 W=5 nf=1 m=1
+XM6 RESET RESET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+R1 V5v0LS net4 170k
+XM11 net4 net4 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=4 nf=1 m=1
+XM12 net2 net4 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=8 nf=1 m=1
+XM1 SET VRE net2 net2 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=6 nf=1 m=1
+XM2 RESET VFE net2 net2 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=6 nf=1 m=1
+.ends
+.end

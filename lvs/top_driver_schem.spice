@@ -1,0 +1,85 @@
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/top_driver.sch
+.subckt top_driver V5v0LS V1v8 GND DIN S1 VX
+*.PININFO V5v0LS:B V1v8:B GND:B DIN:B S1:B VX:B
+x1 Vboot S1 VX V5v0LS V1v8 GND DIN driver_bootstrap
+D3 V5v0LS Vboot sky130_fd_pr__diode_pw2nd_05v5 area=1e12 pj=4e6
+XC1 Vboot VX sky130_fd_pr__cap_mim_m3_2 W=420 L=420 m=1
+.ends
+
+* expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/driver_bootstrap.sym # of pins=7
+** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/driver_bootstrap.sym
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/driver_bootstrap.sch
+.subckt driver_bootstrap Vboot Gate Source V5v0LS V1v8 GND DIN
+*.PININFO Gate:B V5v0LS:B DIN:B V1v8:B GND:B Source:B Vboot:B
+x3 Vboot V5v0LS SET RESET GND VFE VRE boot_ls_stage
+x2 V1v8 GND VFE DIN VRE pulse_generator
+x1 Vboot Gate Source QN Q buffer
+x4 Vboot RESET QN Q Source nand_5v
+x5 Vboot Q SET QN Source nand_5v
+.ends
+
+
+* expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/boot_ls_stage.sym # of pins=7
+** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/boot_ls_stage.sym
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/boot_ls_stage.sch
+.subckt boot_ls_stage Vboot V5v0LS SET RESET GND VFE VRE
+*.PININFO V5v0LS:B GND:B Vboot:B VFE:B VRE:B SET:B RESET:B
+XM7 net1 RESET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM8 SET SET net1 net1 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM4 RESET SET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=1 W=5 nf=1 m=1
+XM3 SET SET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+XM9 net3 SET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM10 RESET RESET net3 net3 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM5 SET RESET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=1 W=5 nf=1 m=1
+XM6 RESET RESET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
+I0 V5v0LS net4 30u
+XM11 net4 net4 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=4 nf=1 m=1
+XM12 net2 net4 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=4 nf=1 m=2
+XM1 SET VRE net2 net2 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=6
+XM2 RESET VFE net2 net2 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=6
+.ends
+
+
+* expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/pulse_generator.sym # of pins=5
+** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/pulse_generator.sym
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/pulse_generator.sch
+.subckt pulse_generator VCC VSS VFE VIN VRE
+*.PININFO VIN:B VFE:B VRE:B VCC:B VSS:B
+x1 net2 VSS VSS VCC VCC predly sky130_fd_sc_hd__inv_1
+x2 predly VSS VSS VCC VCC net3 sky130_fd_sc_hd__inv_1
+x3 dly8 VSS VSS VCC VCC net1 sky130_fd_sc_hd__inv_1
+x4 VIN VSS VSS VCC VCC net2 sky130_fd_sc_hd__inv_2
+x5 predly VSS VSS VCC VCC net4 sky130_fd_sc_hd__inv_8
+x6 net3 dly8 VSS VSS VCC VCC VFE sky130_fd_sc_hd__and2_2
+x7 net1 predly VSS VSS VCC VCC VRE sky130_fd_sc_hd__and2_2
+XC2 dly8 VSS sky130_fd_pr__cap_mim_m3_2 W=80 L=80 m=1
+x8 net4 VSS VSS VCC VCC dly8 sky130_fd_sc_hd__inv_8
+.ends
+
+
+* expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/buffer.sym # of pins=5
+** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/buffer.sym
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/buffer.sch
+.subckt buffer VDD VOUT VSS NQ Q
+*.PININFO VDD:B VSS:B Q:B NQ:B VOUT:B
+XM15 net2 net1 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=3 nf=1 m=1
+XM13 net1 net2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM17 VOUT net2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=10.84 nf=1 m=18
+XM14 net1 Q VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=3 nf=1 m=1
+XM16 net2 NQ VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=3 nf=1 m=1
+XM18 VOUT net2 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=18
+.ends
+
+
+* expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/nand_5v.sym # of pins=5
+** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/nand_5v.sym
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/nand_5v.sch
+.subckt nand_5v VDD A B NAND VSS
+*.PININFO VSS:B VDD:B A:B B:B NAND:B
+XM25 net1 B VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=3 W=5 nf=1 m=1
+XM26 NAND A net1 VSS sky130_fd_pr__nfet_g5v0d10v5 L=3 W=5 nf=1 m=1
+XM27 NAND A VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=3 W=5 nf=1 m=1
+XM28 NAND B VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=3 W=5 nf=1 m=1
+.ends
+
+.end

@@ -1,0 +1,11 @@
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/buffer.sch
+.subckt buffer VDD VSS Q NQ VOUT
+*.PININFO VDD:B VSS:B Q:B NQ:B VOUT:B
+XM15 net2 net1 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=3 nf=1 m=1
+XM13 net1 net2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM17 VOUT net2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=10.84 nf=1 m=18
+XM14 net1 Q VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=3 nf=1 m=1
+XM16 net2 NQ VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=3 nf=1 m=1
+XM18 VOUT net2 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=18
+.ends
+.end

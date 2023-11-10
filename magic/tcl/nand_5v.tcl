@@ -34,7 +34,7 @@ paint metal1
 box [expr {$basex-0.115}]um [expr {$basex+0.07}]um [expr {$right-0.03}]um [expr {$basex+$wire_w+0.07}]um
 paint metal1
 box [expr {$right-0.53}]um [expr {$basex+0.07}]um [expr {$right-0.03}]um [expr {$basex+$wire_w+0.07}]um
-label AND east metal1
+label NAND east metal1
 
 
 # Taps
@@ -123,7 +123,7 @@ paint {mvpsubstratepcontact, viali}
 box [expr {$left-0.67}]um [expr {$down-0.27}]um [expr {$right+0.67}]um [expr {$down-0.67}]um
 paint {metal1}
 box [expr {$left-0.67}]um [expr {$down-0.17}]um [expr {$left-0.17}]um [expr {$down-0.67}]um
-label GND south metal1
+label VSS south metal1
 
 
 flatten nand_5v

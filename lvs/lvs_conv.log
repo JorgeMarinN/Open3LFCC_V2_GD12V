@@ -55,38 +55,37 @@ Circuit 1: sky130_fd_pr__cap_mim_m3_1      |Circuit 2: sky130_fd_pr__cap_mim_m3_
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
 
+Cell boot_ls_stage (0) disconnected node: V5v0LS
 Class boot_ls_stage (1):  Merged 11 parallel devices.
+Cell boot_ls_stage (0) disconnected node: V5v0LS
 Subcircuit summary:
 Circuit 1: boot_ls_stage                   |Circuit 2: boot_ls_stage                   
 -------------------------------------------|-------------------------------------------
 sky130_fd_pr__pfet_g5v0d10v5 (8)           |sky130_fd_pr__pfet_g5v0d10v5 (8)           
-isrc (1)                                   |(no matching element)                      
 sky130_fd_pr__nfet_g5v0d10v5 (15->4)       |sky130_fd_pr__nfet_g5v0d10v5 (15->4)       
-Number of devices: 13 **Mismatch**         |Number of devices: 12 **Mismatch**         
-Number of nets: 11 **Mismatch**            |Number of nets: 10 **Mismatch**            
+Number of devices: 12                      |Number of devices: 12                      
+Number of nets: 10                         |Number of nets: 10                         
 ---------------------------------------------------------------------------------------
-NET mismatches: Class fragments follow (with fanout counts):
-Circuit 1: boot_ls_stage                   |Circuit 2: boot_ls_stage                   
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely with port errors.
 
----------------------------------------------------------------------------------------
-Net: V5v0LS                                |Net: Iref                                  
-  isrc/pos = 1                             |  sky130_fd_pr__nfet_g5v0d10v5/2 = 2       
-                                           |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
-                                           |                                           
-Net: net4                                  |(no matching net)                          
-  isrc/neg = 1                             |                                           
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |                                           
-  sky130_fd_pr__nfet_g5v0d10v5/2 = 2       |                                           
----------------------------------------------------------------------------------------
-DEVICE mismatches: Class fragments follow (with node fanout counts):
+Subcircuit pins:
 Circuit 1: boot_ls_stage                   |Circuit 2: boot_ls_stage                   
-
+-------------------------------------------|-------------------------------------------
+VFE                                        |(no matching pin)                          
+VRE                                        |(no matching pin)                          
+GND                                        |GND                                        
+Vboot                                      |VDD **Mismatch**                           
+SET                                        |SET                                        
+RESET                                      |RESET                                      
+(no matching pin)                          |w_n1158_n782#                              
+V5v0LS                                     |(no matching pin)                          
+VFE                                        |(no matching pin)                          
+VRE                                        |(no matching pin)                          
 ---------------------------------------------------------------------------------------
-Instance: sky130_fd_pr__diode_pw2nd_05v5:3 |(no matching instance)                     
-  pos = 1                                  |                                           
-  neg = 4                                  |                                           
----------------------------------------------------------------------------------------
-Netlists do not match.
+Cell pin lists for boot_ls_stage and boot_ls_stage altered to match.
+Device classes boot_ls_stage and boot_ls_stage are equivalent.
   Flattening non-matched subcircuits boot_ls_stage boot_ls_stage
 
 Class buffer (1):  Merged 34 parallel devices.
@@ -167,11 +166,11 @@ Cell pin lists are equivalent.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
 Flattening unmatched subcell pulse_generator in circuit driver_bootstrap (0)(1 instance)
 
+Cell driver_bootstrap (0) disconnected node: V5v0LS
 Subcircuit summary:
 Circuit 1: driver_bootstrap                |Circuit 2: driver_bootstrap                
 -------------------------------------------|-------------------------------------------
 sky130_fd_pr__pfet_g5v0d10v5 (28->11)      |sky130_fd_pr__pfet_g5v0d10v5 (28->11)      
-isrc (1)                                   |(no matching element)                      
 sky130_fd_pr__nfet_g5v0d10v5 (35->7)       |sky130_fd_pr__nfet_g5v0d10v5 (35->7)       
 sky130_fd_sc_hd__inv_1 (3)                 |(no matching element)                      
 sky130_fd_sc_hd__inv_2 (1)                 |(no matching element)                      
@@ -179,16 +178,16 @@ sky130_fd_sc_hd__inv_8 (2)                 |(no matching element)
 sky130_fd_sc_hd__and2_2 (2)                |(no matching element)                      
 sky130_fd_pr__cap_mim_m3_2 (1)             |(no matching element)                      
 nand_5v (2)                                |nand_5v (2)                                
-Number of devices: 30 **Mismatch**         |Number of devices: 20 **Mismatch**         
-Number of nets: 25 **Mismatch**            |Number of nets: 16 **Mismatch**            
+Number of devices: 29 **Mismatch**         |Number of devices: 20 **Mismatch**         
+Number of nets: 24 **Mismatch**            |Number of nets: 16 **Mismatch**            
 ---------------------------------------------------------------------------------------
 NET mismatches: Class fragments follow (with fanout counts):
 Circuit 1: driver_bootstrap                |Circuit 2: driver_bootstrap                
 
 ---------------------------------------------------------------------------------------
-Net: GND                                   |Net: /boot_ls_stage_0/Iref                 
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 2   |  sky130_fd_pr__nfet_g5v0d10v5/2 = 2       
-  sky130_fd_pr__nfet_g5v0d10v5/4 = 2       |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
+Net: GND                                   |Net: VSUBS                                 
+  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 2   |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 2   
+  sky130_fd_pr__nfet_g5v0d10v5/4 = 2       |  sky130_fd_pr__nfet_g5v0d10v5/4 = 2       
   sky130_fd_sc_hd__inv_1/2 = 3             |                                           
   sky130_fd_sc_hd__inv_1/3 = 3             |                                           
   sky130_fd_sc_hd__inv_2/2 = 1             |                                           
@@ -199,9 +198,9 @@ Net: GND                                   |Net: /boot_ls_stage_0/Iref
   sky130_fd_sc_hd__and2_2/4 = 2            |                                           
   sky130_fd_pr__cap_mim_m3_2/2 = 1         |                                           
                                            |                                           
-Net: pulse_generator:2/net2                |Net: VSUBS                                 
-  sky130_fd_sc_hd__inv_1/1 = 1             |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 2   
-  sky130_fd_sc_hd__inv_2/6 = 1             |  sky130_fd_pr__nfet_g5v0d10v5/4 = 2       
+Net: pulse_generator:2/net2                |(no matching net)                          
+  sky130_fd_sc_hd__inv_1/1 = 1             |                                           
+  sky130_fd_sc_hd__inv_2/6 = 1             |                                           
                                            |                                           
 Net: pulse_generator:2/net4                |(no matching net)                          
   sky130_fd_sc_hd__inv_8/6 = 1             |                                           
@@ -217,10 +216,8 @@ Net: V1v8                                  |(no matching net)
   sky130_fd_sc_hd__and2_2/5 = 2            |                                           
   sky130_fd_sc_hd__and2_2/6 = 2            |                                           
                                            |                                           
-Net: boot_ls_stage:3/net4                  |(no matching net)                          
-  isrc/neg = 1                             |                                           
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |                                           
-  sky130_fd_pr__nfet_g5v0d10v5/2 = 2       |                                           
+Net: DIN                                   |(no matching net)                          
+  sky130_fd_sc_hd__inv_2/1 = 1             |                                           
                                            |                                           
 Net: pulse_generator:2/predly              |(no matching net)                          
   sky130_fd_sc_hd__inv_1/6 = 1             |                                           
@@ -236,82 +233,28 @@ Net: pulse_generator:2/dly8                |(no matching net)
 ---------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------
-Net: Q                                     |Net: buffer_0/Q                            
-  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       |  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       
-  nand_5v/NAND = 1                         |  nand_5v/AND = 1                          
-  nand_5v/B = 1                            |  nand_5v/B = 1                            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: QN                                    |Net: nand_5v_1/B                           
-  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       |  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       
-  nand_5v/B = 1                            |  nand_5v/B = 1                            
-  nand_5v/NAND = 1                         |  nand_5v/AND = 1                          
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
 Net: boot_ls_stage:3/net2                  |Net: w_n3969_322#                          
   sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 3   |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 3   
   sky130_fd_pr__nfet_g5v0d10v5/4 = 2       |  sky130_fd_pr__nfet_g5v0d10v5/4 = 2       
 ---------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------
-Net: Source                                |Net: buffer_0/VSS                          
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 3   |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 3   
-  sky130_fd_pr__nfet_g5v0d10v5/4 = 3       |  sky130_fd_pr__nfet_g5v0d10v5/4 = 3       
-  nand_5v/VSS = 2                          |  nand_5v/GND = 2                          
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: SET                                   |(no matching net)                          
-  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 3   |                                           
-  sky130_fd_pr__pfet_g5v0d10v5/2 = 4       |                                           
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |                                           
-  nand_5v/A = 1                            |                                           
+Net: SET                                   |Net: nand_5v_1/A                           
+  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 3   |  sky130_fd_pr__pfet_g5v0d10v5/2 = 4       
+  sky130_fd_pr__pfet_g5v0d10v5/2 = 4       |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 3   
+  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
+  nand_5v/A = 1                            |  nand_5v/A = 1                            
                                            |                                           
-Net: RESET                                 |(no matching net)                          
-  sky130_fd_pr__pfet_g5v0d10v5/2 = 4       |                                           
-  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 3   |                                           
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |                                           
-  nand_5v/A = 1                            |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-(no matching net)                          |Net: nand_5v_1/A                           
-                                           |  sky130_fd_pr__pfet_g5v0d10v5/2 = 4       
-                                           |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 3   
-                                           |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
-                                           |  nand_5v/A = 1                            
-                                           |                                           
-(no matching net)                          |Net: nand_5v_0/A                           
-                                           |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
-                                           |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 3   
-                                           |  sky130_fd_pr__pfet_g5v0d10v5/2 = 4       
-                                           |  nand_5v/A = 1                            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: DIN                                   |(no matching net)                          
-  sky130_fd_sc_hd__inv_2/1 = 1             |                                           
-                                           |                                           
-Net: V5v0LS                                |(no matching net)                          
-  isrc/pos = 1                             |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: Vboot                                 |Net: VBOOT                                 
-  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 9   |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 9   
-  sky130_fd_pr__pfet_g5v0d10v5/4 = 9       |  sky130_fd_pr__pfet_g5v0d10v5/4 = 9       
-  nand_5v/VDD = 2                          |  nand_5v/VDD = 2                          
+Net: RESET                                 |Net: nand_5v_0/A                           
+  sky130_fd_pr__pfet_g5v0d10v5/2 = 4       |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
+  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 3   |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 3   
+  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__pfet_g5v0d10v5/2 = 4       
+  nand_5v/A = 1                            |  nand_5v/A = 1                            
 ---------------------------------------------------------------------------------------
 DEVICE mismatches: Class fragments follow (with node fanout counts):
 Circuit 1: driver_bootstrap                |Circuit 2: driver_bootstrap                
 
 ---------------------------------------------------------------------------------------
-Instance: boot_ls_stage:3/sky130_fd_pr__di |(no matching instance)                     
-  pos = 1                                  |                                           
-  neg = 4                                  |                                           
-                                           |                                           
 Instance: pulse_generator:2/sky130_fd_sc_h |(no matching instance)                     
   1 = 2                                    |                                           
   2 = 21                                   |                                           
@@ -331,44 +274,6 @@ Instance: pulse_generator:2/sky130_fd_sc_h |(no matching instance)
 Instance: pulse_generator:2/sky130_fd_pr__ |(no matching instance)                     
   1 = 4                                    |                                           
   2 = 21                                   |                                           
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Instance: nand_5v:4                        |Instance: nand_5v_0                        
-  VDD = 20                                 |  VDD = 20                                 
-  A = 9                                    |  A = 9                                    
-  B = 3                                    |  B = 3                                    
-  NAND = 3                                 |  AND = 3                                  
-  VSS = 8                                  |  GND = 8                                  
-                                           |                                           
-Instance: nand_5v:5                        |Instance: nand_5v_1                        
-  VDD = 20                                 |  VDD = 20                                 
-  A = 9                                    |  A = 9                                    
-  B = 3                                    |  B = 3                                    
-  NAND = 3                                 |  AND = 3                                  
-  VSS = 8                                  |  GND = 8                                  
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Instance: boot_ls_stage:3/sky130_fd_pr__pf |Instance: boot_ls_stage_0/sky130_fd_pr__pf 
-  (1,3) = (20,9)                           |  (1,3) = (20,9)                           
-  2 = 9                                    |  2 = 9                                    
-  4 = 20                                   |  4 = 20                                   
-                                           |                                           
-Instance: boot_ls_stage:3/sky130_fd_pr__pf |Instance: boot_ls_stage_0/sky130_fd_pr__pf 
-  (1,3) = (20,9)                           |  (1,3) = (20,9)                           
-  2 = 9                                    |  2 = 9                                    
-  4 = 20                                   |  4 = 20                                   
-                                           |                                           
-Instance: boot_ls_stage:3/sky130_fd_pr__pf |Instance: boot_ls_stage_0/sky130_fd_pr__pf 
-  (1,3) = (20,9)                           |  (1,3) = (20,9)                           
-  2 = 9                                    |  2 = 9                                    
-  4 = 20                                   |  4 = 20                                   
-                                           |                                           
-Instance: boot_ls_stage:3/sky130_fd_pr__pf |Instance: boot_ls_stage_0/sky130_fd_pr__pf 
-  (1,3) = (20,9)                           |  (1,3) = (20,9)                           
-  2 = 9                                    |  2 = 9                                    
-  4 = 20                                   |  4 = 20                                   
 ---------------------------------------------------------------------------------------
 Netlists do not match.
   Flattening non-matched subcircuits driver_bootstrap driver_bootstrap
@@ -440,7 +345,6 @@ Subcircuit summary:
 Circuit 1: converter_3                     |Circuit 2: converter_3                     
 -------------------------------------------|-------------------------------------------
 sky130_fd_pr__pfet_g5v0d10v5 (60->15)      |sky130_fd_pr__pfet_g5v0d10v5 (60->15)      
-isrc (1)                                   |(no matching element)                      
 sky130_fd_pr__nfet_g5v0d10v5 (5111->13)    |sky130_fd_pr__nfet_g5v0d10v5 (5111->13)    
 sky130_fd_sc_hd__inv_1 (3)                 |(no matching element)                      
 sky130_fd_sc_hd__inv_2 (1)                 |(no matching element)                      
@@ -452,35 +356,35 @@ sky130_fd_pr__diode_pw2nd_05v5 (1)         |(no matching element)
 sky130_fd_pr__pfet_01v8 (5->1)             |sky130_fd_pr__pfet_01v8 (5->1)             
 sky130_fd_pr__nfet_01v8 (5->1)             |sky130_fd_pr__nfet_01v8 (5->1)             
 sky130_fd_pr__cap_mim_m3_1 (1)             |sky130_fd_pr__cap_mim_m3_1 (98->1)         
-Number of devices: 45 **Mismatch**         |Number of devices: 34 **Mismatch**         
+Number of devices: 44 **Mismatch**         |Number of devices: 34 **Mismatch**         
 Number of nets: 32 **Mismatch**            |Number of nets: 28 **Mismatch**            
 ---------------------------------------------------------------------------------------
 NET mismatches: Class fragments follow (with fanout counts):
 Circuit 1: converter_3                     |Circuit 2: converter_3                     
 
 ---------------------------------------------------------------------------------------
-Net: Vboot                                 |Net: /power_stage_3_0/s1                   
-  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 9   |  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       
-  sky130_fd_pr__pfet_g5v0d10v5/4 = 9       |                                           
-  nand_5v/VDD = 2                          |                                           
+Net: Vboot                                 |Net: power_stage_3_0/s2                    
+  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 9   |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
+  sky130_fd_pr__pfet_g5v0d10v5/4 = 9       |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
+  nand_5v/VDD = 2                          |  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       
   sky130_fd_pr__diode_pw2nd_05v5/cathode = |                                           
   sky130_fd_pr__cap_mim_m3_2/1 = 1         |                                           
   sky130_fd_pr__cap_mim_m3_1/1 = 1         |                                           
                                            |                                           
-Net: driver_bootstrap:1/boot_ls_stage:3/ne |Net: /level_shifter_0/level_shifter_0/cruz 
-  isrc/neg = 1                             |  sky130_fd_pr__pfet_g5v0d10v5/2 = 2       
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
-  sky130_fd_pr__nfet_g5v0d10v5/2 = 2       |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
+Net: level_shifter:3/net4                  |Net: /driver_bootstrap_0//buffer_0/a_n195_ 
+  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
+  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__pfet_g5v0d10v5/2 = 1       
+  sky130_fd_pr__pfet_g5v0d10v5/2 = 1       |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
+  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       |                                           
                                            |                                           
-Net: V5v0LS                                |Net: /level_shifter_0/level_shifter_0/inv_ 
-  isrc/pos = 1                             |  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       
-  sky130_fd_pr__diode_pw2nd_05v5/anode = 1 |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
+Net: V5v0LS                                |Net: /level_shifter_0/a_1660_2346#         
+  sky130_fd_pr__diode_pw2nd_05v5/anode = 1 |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
   sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 4   |  sky130_fd_pr__pfet_g5v0d10v5/2 = 1       
-  sky130_fd_pr__pfet_g5v0d10v5/4 = 4       |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
+  sky130_fd_pr__pfet_g5v0d10v5/4 = 4       |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
                                            |                                           
-Net: V1v8                                  |Net: VDD                                   
-  sky130_fd_sc_hd__inv_1/4 = 3             |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
-  sky130_fd_sc_hd__inv_1/5 = 3             |  sky130_fd_pr__nfet_g5v0d10v5/4 = 1       
+Net: V1v8                                  |Net: /power_stage_3_0/s1                   
+  sky130_fd_sc_hd__inv_1/4 = 3             |  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       
+  sky130_fd_sc_hd__inv_1/5 = 3             |                                           
   sky130_fd_sc_hd__inv_2/4 = 1             |                                           
   sky130_fd_sc_hd__inv_2/5 = 1             |                                           
   sky130_fd_sc_hd__inv_8/4 = 2             |                                           
@@ -490,10 +394,10 @@ Net: V1v8                                  |Net: VDD
   sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
   sky130_fd_pr__pfet_01v8/4 = 1            |                                           
                                            |                                           
-Net: GND                                   |Net: /driver_bootstrap_0//buffer_0/out     
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 7   |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
+Net: GND                                   |Net: /level_shifter_0/level_shifter_0/cruz 
+  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 7   |  sky130_fd_pr__pfet_g5v0d10v5/2 = 2       
   sky130_fd_pr__nfet_g5v0d10v5/4 = 7       |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
-  sky130_fd_sc_hd__inv_1/2 = 3             |                                           
+  sky130_fd_sc_hd__inv_1/2 = 3             |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
   sky130_fd_sc_hd__inv_1/3 = 3             |                                           
   sky130_fd_sc_hd__inv_2/2 = 1             |                                           
   sky130_fd_sc_hd__inv_2/3 = 1             |                                           
@@ -505,9 +409,28 @@ Net: GND                                   |Net: /driver_bootstrap_0//buffer_0/o
   sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
   sky130_fd_pr__nfet_01v8/4 = 1            |                                           
                                            |                                           
-Net: D1                                    |Net: /level_shifter_0/level_shifter_0/VDD  
-  sky130_fd_sc_hd__inv_2/1 = 1             |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-                                           |  sky130_fd_pr__pfet_01v8/4 = 1            
+Net: D1                                    |Net: /level_shifter_0/level_shifter_0/inv_ 
+  sky130_fd_sc_hd__inv_2/1 = 1             |  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       
+                                           |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
+                                           |  sky130_fd_pr__pfet_g5v0d10v5/2 = 1       
+                                           |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
+                                           |                                           
+Net: driver_bootstrap:1/pulse_generator:2/ |Net: VDD                                   
+  sky130_fd_sc_hd__inv_1/6 = 1             |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
+  sky130_fd_sc_hd__inv_1/1 = 1             |  sky130_fd_pr__nfet_g5v0d10v5/4 = 1       
+  sky130_fd_sc_hd__inv_8/1 = 1             |                                           
+  sky130_fd_sc_hd__and2_2/2 = 1            |                                           
+                                           |                                           
+Net: driver_bootstrap:1/pulse_generator:2/ |Net: /driver_bootstrap_0//buffer_0/out     
+  sky130_fd_sc_hd__inv_1/1 = 1             |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
+  sky130_fd_sc_hd__and2_2/2 = 1            |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
+  sky130_fd_pr__cap_mim_m3_2/1 = 1         |                                           
+  sky130_fd_sc_hd__inv_8/6 = 1             |                                           
+                                           |                                           
+Net: level_shifter:3/net2                  |Net: /level_shifter_0/level_shifter_0/VDD  
+  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_g5v0d10v5/2 = 2       |  sky130_fd_pr__pfet_01v8/4 = 1            
+  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |                                           
                                            |                                           
 Net: Vout                                  |Net: Vout                                  
   sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 5   |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 2   
@@ -516,53 +439,78 @@ Net: Vout                                  |Net: Vout
   sky130_fd_pr__cap_mim_m3_2/2 = 1         |  sky130_fd_pr__cap_mim_m3_2/1 = 1         
   nand_5v/VSS = 2                          |                                           
                                            |                                           
-Net: driver_bootstrap:1/pulse_generator:2/ |Net: w_108020_n12608#                      
-  sky130_fd_sc_hd__inv_1/6 = 1             |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 3   
-  sky130_fd_sc_hd__inv_1/1 = 1             |  sky130_fd_pr__nfet_g5v0d10v5/4 = 2       
-  sky130_fd_sc_hd__inv_8/1 = 1             |                                           
-  sky130_fd_sc_hd__and2_2/2 = 1            |                                           
-                                           |                                           
 Net: driver_bootstrap:1/pulse_generator:2/ |Net: /driver_bootstrap_0//buffer_0/a_n137_ 
   sky130_fd_sc_hd__inv_1/1 = 1             |  sky130_fd_pr__pfet_g5v0d10v5/2 = 2       
-  sky130_fd_sc_hd__and2_2/2 = 1            |  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       
-  sky130_fd_pr__cap_mim_m3_2/1 = 1         |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
-  sky130_fd_sc_hd__inv_8/6 = 1             |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
+  sky130_fd_sc_hd__inv_2/6 = 1             |  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       
+                                           |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
+                                           |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
                                            |                                           
-Net: level_shifter:3/net2                  |Net: VSUBS                                 
-  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 6   
-  sky130_fd_pr__pfet_g5v0d10v5/2 = 2       |  sky130_fd_pr__nfet_g5v0d10v5/4 = 6       
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+Net: driver_bootstrap:1/pulse_generator:2/ |Net: VSUBS                                 
+  sky130_fd_sc_hd__inv_8/6 = 1             |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 6   
+  sky130_fd_sc_hd__inv_8/1 = 1             |  sky130_fd_pr__nfet_g5v0d10v5/4 = 6       
+                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
                                            |  sky130_fd_pr__nfet_01v8/4 = 1            
                                            |                                           
-Net: level_shifter:3/net4                  |Net: driver_bootstrap_0/VBOOT              
+Net: driver_bootstrap:1/buffer:1/net2      |Net: driver_bootstrap_0/VBOOT              
   sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__cap_mim_m3_1/1 = 1         
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__cap_mim_m3_2/2 = 1         
-  sky130_fd_pr__pfet_g5v0d10v5/2 = 1       |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 9   
+  sky130_fd_pr__pfet_g5v0d10v5/2 = 2       |  sky130_fd_pr__cap_mim_m3_2/2 = 1         
+  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 9   
   sky130_fd_pr__nfet_g5v0d10v5/2 = 1       |  sky130_fd_pr__pfet_g5v0d10v5/4 = 9       
                                            |  nand_5v/VDD = 2                          
-                                           |                                           
-Net: driver_bootstrap:1/pulse_generator:2/ |(no matching net)                          
-  sky130_fd_sc_hd__inv_1/1 = 1             |                                           
-  sky130_fd_sc_hd__inv_2/6 = 1             |                                           
-                                           |                                           
-Net: driver_bootstrap:1/pulse_generator:2/ |(no matching net)                          
-  sky130_fd_sc_hd__inv_8/6 = 1             |                                           
-  sky130_fd_sc_hd__inv_8/1 = 1             |                                           
-                                           |                                           
-Net: driver_bootstrap:1/boot_ls_stage:3/ne |(no matching net)                          
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 3   |                                           
-  sky130_fd_pr__nfet_g5v0d10v5/4 = 2       |                                           
-                                           |                                           
-Net: driver_bootstrap:1/buffer:1/net2      |(no matching net)                          
-  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   |                                           
-  sky130_fd_pr__pfet_g5v0d10v5/2 = 2       |                                           
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |                                           
-  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: driver_bootstrap:1/boot_ls_stage:3/ne |Net: w_108020_n12608#                      
+  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 3   |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 3   
+  sky130_fd_pr__nfet_g5v0d10v5/4 = 2       |  sky130_fd_pr__nfet_g5v0d10v5/4 = 2       
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: D2                                    |Net: /level_shifter_0/level_shifter_0/IN   
+  sky130_fd_pr__pfet_01v8/2 = 1            |  sky130_fd_pr__pfet_01v8/2 = 1            
+  sky130_fd_pr__nfet_01v8/2 = 1            |  sky130_fd_pr__nfet_01v8/2 = 1            
+  sky130_fd_pr__nfet_g5v0d10v5/2 = 2       |  sky130_fd_pr__nfet_g5v0d10v5/2 = 2       
 ---------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------
 Net: V10v0                                 |Net: VSS                                   
   sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: level_shifter:3/net3                  |(no matching net)                          
+  sky130_fd_pr__pfet_g5v0d10v5/2 = 1       |                                           
+  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   |                                           
+  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |                                           
+                                           |                                           
+Net: driver_bootstrap:1/buffer:1/net1      |(no matching net)                          
+  sky130_fd_pr__pfet_g5v0d10v5/2 = 1       |                                           
+  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   |                                           
+  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: driver_bootstrap:1/Q                  |(no matching net)                          
+  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       |                                           
+  nand_5v/NAND = 1                         |                                           
+  nand_5v/B = 1                            |                                           
+                                           |                                           
+Net: driver_bootstrap:1/QN                 |(no matching net)                          
+  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       |                                           
+  nand_5v/B = 1                            |                                           
+  nand_5v/NAND = 1                         |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: S2                                    |(no matching net)                          
+  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       |                                           
+  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   |                                           
+  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |                                           
+                                           |                                           
+Net: S1                                    |(no matching net)                          
+  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   |                                           
+  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |                                           
+  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       |                                           
 ---------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------
@@ -575,61 +523,13 @@ Net: V10v0                                 |Net: VSS
                                            |  sky130_fd_pr__nfet_g5v0d10v5/4 = 3       
                                            |  nand_5v/GND = 2                          
 ---------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: level_shifter:3/net3                  |Net: /level_shifter_0/a_1660_2346#         
-  sky130_fd_pr__pfet_g5v0d10v5/2 = 1       |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
-  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__pfet_g5v0d10v5/2 = 1       
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
-                                           |                                           
-Net: driver_bootstrap:1/buffer:1/net1      |Net: /driver_bootstrap_0//buffer_0/a_n195_ 
-  sky130_fd_pr__pfet_g5v0d10v5/2 = 1       |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
-  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__pfet_g5v0d10v5/2 = 1       
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
-                                           |                                           
-Net: driver_bootstrap:1/Q                  |Net: /driver_bootstrap_0//boot_ls_stage_0/ 
-  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       |  sky130_fd_pr__nfet_g5v0d10v5/2 = 2       
-  nand_5v/NAND = 1                         |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
-  nand_5v/B = 1                            |                                           
-                                           |                                           
-Net: driver_bootstrap:1/QN                 |Net: /driver_bootstrap_0/buffer_0/Q        
-  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       |  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       
-  nand_5v/B = 1                            |  nand_5v/B = 1                            
-  nand_5v/NAND = 1                         |  nand_5v/AND = 1                          
-                                           |                                           
-(no matching net)                          |Net: /driver_bootstrap_0/nand_5v_1/B       
-                                           |  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       
-                                           |  nand_5v/AND = 1                          
-                                           |  nand_5v/B = 1                            
-                                           |                                           
-(no matching net)                          |Net: power_stage_3_0/s2                    
-                                           |  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   
-                                           |  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   
-                                           |  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: S1                                    |(no matching net)                          
-  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   |                                           
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |                                           
-  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       |                                           
-                                           |                                           
-Net: S2                                    |(no matching net)                          
-  sky130_fd_pr__nfet_g5v0d10v5/2 = 1       |                                           
-  sky130_fd_pr__pfet_g5v0d10v5/(1|3) = 1   |                                           
-  sky130_fd_pr__nfet_g5v0d10v5/(1|3) = 1   |                                           
----------------------------------------------------------------------------------------
 DEVICE mismatches: Class fragments follow (with node fanout counts):
 Circuit 1: converter_3                     |Circuit 2: converter_3                     
 
 ---------------------------------------------------------------------------------------
-Instance: driver_bootstrap:1/boot_ls_stage |Instance: mimcap_210x420_0//mimcap_30x30_9 
-  pos = 10                                 |  1 = 5                                    
-  neg = 4                                  |  2 = 22                                   
-                                           |                                           
-Instance: driver_bootstrap:1/pulse_generat |(no matching instance)                     
-  1 = 2                                    |                                           
-  2 = 33                                   |                                           
+Instance: driver_bootstrap:1/pulse_generat |Instance: mimcap_210x420_0//mimcap_30x30_9 
+  1 = 2                                    |  1 = 5                                    
+  2 = 33                                   |  2 = 22                                   
   3 = 33                                   |                                           
   4 = 18                                   |                                           
   5 = 18                                   |                                           
@@ -652,70 +552,58 @@ Instance: sky130_fd_pr__cap_mim_m3_2:C1    |(no matching instance)
   2 = 13                                   |                                           
                                            |                                           
 Instance: sky130_fd_pr__diode_pw2nd_05v5:3 |(no matching instance)                     
-  anode = 10                               |                                           
+  anode = 9                                |                                           
   cathode = 23                             |                                           
 ---------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------
-Instance: power_stage_3:2/sky130_fd_pr__nf |Instance: driver_bootstrap_0//buffer_0/sky 
-  (1,3) = (33,13)                          |  (1,3) = (8,5)                            
-  2 = 3                                    |  2 = 3                                    
-  4 = 33                                   |  4 = 8                                    
-                                           |                                           
-Instance: power_stage_3:2/sky130_fd_pr__nf |Instance: driver_bootstrap_0//buffer_0/sky 
-  (1,3) = (13,1)                           |  (1,3) = (8,3)                            
-  2 = 3                                    |  2 = 3                                    
-  4 = 13                                   |  4 = 8                                    
-                                           |                                           
-Instance: driver_bootstrap:1/boot_ls_stage |Instance: driver_bootstrap_0//buffer_0/sky 
-  (1,3) = (33,5)                           |  (1,3) = (8,2)                            
+Instance: level_shifter:3/sky130_fd_pr__nf |Instance: driver_bootstrap_0//buffer_0/sky 
+  (1,3) = (33,4)                           |  (1,3) = (8,2)                            
   2 = 4                                    |  2 = 5                                    
   4 = 33                                   |  4 = 8                                    
                                            |                                           
-Instance: driver_bootstrap:1/boot_ls_stage |Instance: power_stage_3_0//nmos_waffle_36x 
-  (1,3) = (33,4)                           |  (1,3) = (5,1)                            
+Instance: level_shifter:3/sky130_fd_pr__nf |Instance: power_stage_3_0//nmos_waffle_36x 
+  (1,3) = (33,3)                           |  (1,3) = (5,1)                            
   2 = 4                                    |  2 = 3                                    
   4 = 33                                   |  4 = 5                                    
                                            |                                           
-(no matching instance)                     |Instance: power_stage_3_0//nmos_waffle_36x 
-                                           |  (1,3) = (5,2)                            
-                                           |  2 = 1                                    
-                                           |  4 = 2                                    
+Instance: power_stage_3:2/sky130_fd_pr__nf |Instance: level_shifter_0/sky130_fd_pr__nf 
+  (1,3) = (33,13)                          |  (1,3) = (14,3)                           
+  2 = 3                                    |  2 = 4                                    
+  4 = 33                                   |  4 = 14                                   
+                                           |                                           
+Instance: power_stage_3:2/sky130_fd_pr__nf |Instance: level_shifter_0/sky130_fd_pr__nf 
+  (1,3) = (13,1)                           |  (1,3) = (14,4)                           
+  2 = 3                                    |  2 = 4                                    
+  4 = 13                                   |  4 = 14                                   
+                                           |                                           
+Instance: driver_bootstrap:1/buffer:1/sky1 |(no matching instance)                     
+  (1,3) = (13,5)                           |                                           
+  2 = 3                                    |                                           
+  4 = 13                                   |                                           
                                            |                                           
                                            |                                           
-(no matching instance)                     |Instance: level_shifter_0/sky130_fd_pr__nf 
-                                           |  (1,3) = (14,3)                           
-                                           |  2 = 4                                    
-                                           |  4 = 14                                   
+Instance: driver_bootstrap:1/buffer:1/sky1 |(no matching instance)                     
+  (1,3) = (13,3)                           |                                           
+  2 = 3                                    |                                           
+  4 = 13                                   |                                           
                                            |                                           
 ---------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------
 Instance: level_shifter:3/sky130_fd_pr__pf |Instance: driver_bootstrap_0//buffer_0/sky 
-  (1,3) = (10,3)                           |  (1,3) = (22,3)                           
+  (1,3) = (9,4)                            |  (1,3) = (22,3)                           
   2 = 4                                    |  2 = 5                                    
-  4 = 10                                   |  4 = 22                                   
+  4 = 9                                    |  4 = 22                                   
                                            |                                           
-Instance: driver_bootstrap:1/buffer:1/sky1 |Instance: driver_bootstrap_0//buffer_0/sky 
-  (1,3) = (23,3)                           |  (1,3) = (22,5)                           
-  2 = 5                                    |  2 = 3                                    
+Instance: driver_bootstrap:1/boot_ls_stage |Instance: driver_bootstrap_0//buffer_0/sky 
+  (1,3) = (23,9)                           |  (1,3) = (22,5)                           
+  2 = 9                                    |  2 = 3                                    
   4 = 23                                   |  4 = 22                                   
                                            |                                           
-Instance: level_shifter:3/sky130_fd_pr__pf |Instance: level_shifter_0/sky130_fd_pr__pf 
-  (1,3) = (10,4)                           |  (1,3) = (8,4)                            
-  2 = 3                                    |  2 = 3                                    
-  4 = 10                                   |  4 = 8                                    
-                                           |                                           
-Instance: driver_bootstrap:1/buffer:1/sky1 |Instance: level_shifter_0/sky130_fd_pr__pf 
-  (1,3) = (23,5)                           |  (1,3) = (8,4)                            
-  2 = 3                                    |  2 = 4                                    
-  4 = 23                                   |  4 = 8                                    
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Instance: driver_bootstrap:1/boot_ls_stage |Instance: driver_bootstrap_0//boot_ls_stag 
-  (1,3) = (23,9)                           |  (1,3) = (22,9)                           
-  2 = 9                                    |  2 = 9                                    
+Instance: driver_bootstrap:1/boot_ls_stage |Instance: driver_bootstrap_0//buffer_0/sky 
+  (1,3) = (23,9)                           |  (1,3) = (22,2)                           
+  2 = 9                                    |  2 = 5                                    
   4 = 23                                   |  4 = 22                                   
                                            |                                           
 Instance: driver_bootstrap:1/boot_ls_stage |Instance: driver_bootstrap_0//boot_ls_stag 
@@ -728,10 +616,41 @@ Instance: driver_bootstrap:1/boot_ls_stage |Instance: driver_bootstrap_0//boot_l
   2 = 9                                    |  2 = 9                                    
   4 = 23                                   |  4 = 22                                   
                                            |                                           
-Instance: driver_bootstrap:1/boot_ls_stage |Instance: driver_bootstrap_0//boot_ls_stag 
-  (1,3) = (23,9)                           |  (1,3) = (22,9)                           
-  2 = 9                                    |  2 = 9                                    
-  4 = 23                                   |  4 = 22                                   
+(no matching instance)                     |Instance: driver_bootstrap_0//boot_ls_stag 
+                                           |  (1,3) = (22,9)                           
+                                           |  2 = 9                                    
+                                           |  4 = 22                                   
+                                           |                                           
+                                           |                                           
+(no matching instance)                     |Instance: driver_bootstrap_0//boot_ls_stag 
+                                           |  (1,3) = (22,9)                           
+                                           |  2 = 9                                    
+                                           |  4 = 22                                   
+                                           |                                           
+                                           |                                           
+(no matching instance)                     |Instance: level_shifter_0/sky130_fd_pr__pf 
+                                           |  (1,3) = (8,4)                            
+                                           |  2 = 3                                    
+                                           |  4 = 8                                    
+                                           |                                           
+                                           |                                           
+(no matching instance)                     |Instance: level_shifter_0/sky130_fd_pr__pf 
+                                           |  (1,3) = (8,4)                            
+                                           |  2 = 4                                    
+                                           |  4 = 8                                    
+                                           |                                           
+                                           |                                           
+(no matching instance)                     |Instance: level_shifter_0/sky130_fd_pr__pf 
+                                           |  (1,3) = (8,3)                            
+                                           |  2 = 4                                    
+                                           |  4 = 8                                    
+                                           |                                           
+                                           |                                           
+(no matching instance)                     |Instance: level_shifter_0/sky130_fd_pr__pf 
+                                           |  (1,3) = (8,3)                            
+                                           |  2 = 4                                    
+                                           |  4 = 8                                    
+                                           |                                           
 ---------------------------------------------------------------------------------------
 Netlists do not match.
 

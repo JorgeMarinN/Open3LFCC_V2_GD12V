@@ -77,7 +77,7 @@ paint {mvnsubstratencontact, viali}
 box [expr {$left-0.77}]um [expr {$up+0.27}]um [expr {$right+0.77}]um [expr {$up+1.27}]um
 paint {metal1}
 box [expr {$left-0.77}]um [expr {$up+0.77}]um [expr {$left-0.27}]um [expr {$up+1.27}]um
-label VDD north metal1
+label Vboot north metal1
 box [expr {$right+0.27}]um [expr {$down}]um [expr {$right+0.67}]um [expr {$up}]um
 paint {mvnsubstratendiff, locali}
 box [expr {$right+0.37}]um [expr {$down+0.15}]um [expr {$right+0.57}]um [expr {$up-0.15}]um

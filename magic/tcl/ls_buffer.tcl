@@ -217,7 +217,7 @@ paint {m2contact}
 box [expr {$left+0.82}]um [expr {$basey + 0.07}]um [expr {$right+1}]um [expr {$basey+$wire_w+0.07}]um
 paint {metal2}
 box [expr {$right+0.5}]um [expr {$basey + 0.07}]um [expr {$right+1}]um [expr {$basey+$wire_w+0.07}]um
-label out east metal2
+label Vout east metal2
 
 
 # Sources

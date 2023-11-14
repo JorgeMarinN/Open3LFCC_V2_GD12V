@@ -119,16 +119,18 @@ N 580 -110 580 -80 {
 lab=GND}
 N 580 -110 600 -110 {
 lab=GND}
-N 220 -160 660 -160 {
-lab=#net4}
-N 220 -180 220 -160 {
-lab=#net4}
-N 220 -360 220 -240 {
-lab=V5v0LS}
 N 260 -460 1080 -460 {
 lab=Vboot}
 N 60 -460 260 -460 {
 lab=Vboot}
+N 560 -160 660 -160 {
+lab=#net4}
+N 220 -320 220 -160 {
+lab=V5v0LS}
+N 220 -160 260 -160 {
+lab=V5v0LS}
+N 260 -140 530 -140 {
+lab=#net5}
 C {sky130_fd_pr/pfet_g5v0d10v5.sym} 400 -430 0 1 {name=M7
 L=0.5
 W=1
@@ -247,7 +249,6 @@ C {devices/lab_pin.sym} 1020 -430 0 0 {name=l5 sig_type=std_logic lab=SET}
 C {devices/lab_pin.sym} 900 -340 0 1 {name=l6 sig_type=std_logic lab=RESET}
 C {devices/lab_pin.sym} 600 -230 0 0 {name=l7 sig_type=std_logic lab=VRE}
 C {devices/lab_pin.sym} 840 -230 0 1 {name=l8 sig_type=std_logic lab=VFE}
-C {devices/isource.sym} 220 -210 0 0 {name=I0 value=30u}
 C {sky130_fd_pr/nfet_g5v0d10v5.sym} 620 -110 0 1 {name=M11
 L=2
 W=4
@@ -313,3 +314,29 @@ C {devices/iopin.sym} 60 -90 2 0 {name=p3 lab=VRE
 }
 C {devices/iopin.sym} 1180 -280 0 0 {name=p4 lab=SET}
 C {devices/iopin.sym} 1180 -220 0 0 {name=p5 lab=RESET}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 290 -160 3 0 {name=R1
+L=2.612
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 350 -160 3 0 {name=R2
+L=2.612
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 410 -160 3 0 {name=R3
+L=2.612
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 470 -160 3 0 {name=R4
+L=2.612
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 530 -160 3 0 {name=R5
+L=2.612
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {devices/lab_pin.sym} 260 -140 2 1 {name=l1 sig_type=std_logic lab=GND}

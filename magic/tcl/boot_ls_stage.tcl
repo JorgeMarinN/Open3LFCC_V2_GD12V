@@ -3,10 +3,8 @@
 #   AC3E - UTFSM      	#
 #   Project: 3LFCC v.2 	#
 #   Bootstrap LS stage	#
-#   01-11-2023        	#
+#   13-11-2023        	#
 # #####################	#
-
-# VERSION CON 2 FINGERS
 
 drc style drc(full)
 
@@ -450,10 +448,8 @@ for {set i 0} {$i < [expr {$n_fingers}]} {incr i} {
 	box [expr {$x+0.25}]um [expr {$up+0.14}]um [expr {$x+1.75}]um [expr {$up + $wire_w + 0.14}]um
 	paint {locali, metal1}
 }
-box [expr {$left-3}]um [expr {$up+0.14}]um [expr {$right-0.4}]um [expr {$up + $wire_w + 0.14}]um
+box [expr {$left-3.41}]um [expr {$up+0.14}]um [expr {$right-0.4}]um [expr {$up + $wire_w + 0.14}]um
 paint metal2
-box [expr {$left-3}]um [expr {$up+0.14}]um [expr {$left-2.5}]um [expr {$up + $wire_w + 0.14}]um
-label Iref west metal2
 
 
 # Drain & Source
@@ -484,14 +480,39 @@ box [expr {$left-0.47}]um [expr {$down+0.15}]um [expr {$left-0.67}]um [expr {$up
 paint {mvpsubstratepcontact, viali}
 box [expr {$left-0.37}]um [expr {$down-0.86}]um [expr {$left-0.77}]um [expr {$up}]um
 paint {metal1}
-box [expr {$left}]um [expr {$down-0.37}]um [expr {$right}]um [expr {$down-0.77}]um
+box [expr {$left-6}]um [expr {$down-0.37}]um [expr {$right}]um [expr {$down-0.77}]um
 paint {mvpsubstratepdiff, locali}
-box [expr {$left+0.15}]um [expr {$down-0.47}]um [expr {$right-0.15}]um [expr {$down-0.67}]um
+box [expr {$left-5.85}]um [expr {$down-0.47}]um [expr {$right-0.15}]um [expr {$down-0.67}]um
 paint {mvpsubstratepcontact, viali}
-box [expr {$left-0.77}]um [expr {$down-0.37}]um [expr {$right+0.77}]um [expr {$down-1.37}]um
+box [expr {$left-6.2}]um [expr {$down-0.37}]um [expr {$right+0.77}]um [expr {$down-1.37}]um
 paint {metal1}
-box [expr {$left-0.77}]um [expr {$down-0.87}]um [expr {$left-0.27}]um [expr {$down-1.37}]um
+box [expr {$left-6.2}]um [expr {$down-0.87}]um [expr {$left-5.7}]um [expr {$down-1.37}]um
 label GND south metal1
+
+
+# -------------------------------------
+# Current Source Resistor 
+# -------------------------------------
+# Device
+box [expr {$left-8.18}]um [expr {$up-3.47}]um [expr {$left}]um [expr {$up}]um
+getcell pres_5x2u612_0u35.mag
+rotate 90
+
+box [expr {$left-3.385}]um [expr {$up-0.09}]um [expr {$left-1.28}]um [expr {$up + $wire_w + 0.14}]um
+paint metal1
+box [expr {$left-3.285}]um [expr {$up+0.24}]um [expr {$left-1.38}]um [expr {$up + $wire_w + 0.04}]um
+paint m2contact
+box [expr {$left-8.15}]um [expr {$up-0.92}]um [expr {$left-6.045}]um [expr {$up + 0.16}]um
+paint metal1
+box [expr {$left-3.385}]um [expr {$up-1.75}]um [expr {$left-1.28}]um [expr {$up - 0.67}]um
+paint metal1
+box [expr {$left-8.15}]um [expr {$up-2.58}]um [expr {$left-6.045}]um [expr {$up - 1.5}]um
+paint metal1
+box [expr {$left-3.385}]um [expr {$up-3.41}]um [expr {$left-1.28}]um [expr {$up - 2.33}]um
+paint metal1
+box [expr {$left-8.15}]um [expr {$up-3.41}]um [expr {$left-7.65}]um [expr {$up - 3.16}]um
+paint metal1
+label V5v0LS west metal1
 
 flatten boot_ls_stage
 load boot_ls_stage

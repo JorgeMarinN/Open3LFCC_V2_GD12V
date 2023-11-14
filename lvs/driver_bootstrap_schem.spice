@@ -21,11 +21,15 @@ XM9 net3 SET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
 XM10 RESET RESET net3 net3 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
 XM5 SET RESET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=1 W=5 nf=1 m=1
 XM6 RESET RESET Vboot Vboot sky130_fd_pr__pfet_g5v0d10v5 L=1 W=0.5 nf=1 m=1
-I0 V5v0LS net4 30u
 XM11 net4 net4 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=4 nf=1 m=1
 XM12 net2 net4 GND GND sky130_fd_pr__nfet_g5v0d10v5 L=2 W=4 nf=1 m=2
 XM1 SET VRE net2 net2 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=6
 XM2 RESET VFE net2 net2 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=6
+XR1 net5 V5v0LS GND sky130_fd_pr__res_xhigh_po_0p35 L=2.612 mult=1 m=1
+XR2 net6 net5 GND sky130_fd_pr__res_xhigh_po_0p35 L=2.612 mult=1 m=1
+XR3 net7 net6 GND sky130_fd_pr__res_xhigh_po_0p35 L=2.612 mult=1 m=1
+XR4 net8 net7 GND sky130_fd_pr__res_xhigh_po_0p35 L=2.612 mult=1 m=1
+XR5 net4 net8 GND sky130_fd_pr__res_xhigh_po_0p35 L=2.612 mult=1 m=1
 .ends
 
 
@@ -49,13 +53,13 @@ x8 net4 VSS VSS VCC VCC dly8 sky130_fd_sc_hd__inv_8
 * expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/buffer.sym # of pins=5
 ** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/buffer.sym
 ** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/buffer.sch
-.subckt buffer VDD VOUT VSS NQ Q
-*.PININFO VDD:B VSS:B Q:B NQ:B VOUT:B
+.subckt buffer VDD VOUT VSS QN Q
+*.PININFO VDD:B VSS:B Q:B QN:B VOUT:B
 XM15 net2 net1 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=3 nf=1 m=1
 XM13 net1 net2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
 XM17 VOUT net2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=10.84 nf=1 m=18
 XM14 net1 Q VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=3 nf=1 m=1
-XM16 net2 NQ VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=3 nf=1 m=1
+XM16 net2 QN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=3 nf=1 m=1
 XM18 VOUT net2 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=18
 .ends
 

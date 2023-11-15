@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1699934371
+timestamp 1699974556
 << dnwell >>
 rect -187 -1532 7721 108
 << nwell >>
@@ -79,11 +79,10 @@ rect 46 -1300 7488 -1220
 rect 7641 -1296 7661 -196
 rect 7701 -1296 7741 -196
 rect 7641 -1452 7741 -1296
-rect -542 -1472 7741 -1452
-rect -542 -1512 49 -1472
+rect -207 -1472 7741 -1452
+rect -207 -1512 49 -1472
 rect 7485 -1512 7741 -1472
-rect -542 -1552 7741 -1512
-rect -542 -1652 7408 -1552
+rect -207 -1552 7741 -1512
 << via1 >>
 rect 280 36 796 96
 rect 2780 36 3296 96
@@ -127,14 +126,14 @@ timestamp 1699046184
 transform 1 0 4051 0 1 -12
 box -395 -1088 3503 2502
 use nand_5v  nand_5v_0
-timestamp 1699045454
+timestamp 1699971027
 transform 1 0 867 0 1 2
 box -867 -1302 867 1348
 use nand_5v  nand_5v_1
-timestamp 1699045454
+timestamp 1699971027
 transform 1 0 2709 0 1 2
 box -867 -1302 867 1348
 << labels >>
 rlabel metal1 -3586 2400 -3386 2600 1 VBOOT
-rlabel metal1 7208 -1652 7408 -1452 5 VSource
+rlabel metal1 6866 -1300 7066 -1100 5 VSource
 << end >>

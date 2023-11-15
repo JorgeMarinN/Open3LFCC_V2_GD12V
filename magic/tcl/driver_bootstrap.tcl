@@ -3,7 +3,7 @@
 #   AC3E - UTFSM      	#
 #   Project: 3LFCC v.2 	#
 #   Bootstrap driver	#
-#   10-11-2023        	#
+#   13-11-2023        	#
 # #####################	#
 
 drc style drc(full)
@@ -38,6 +38,8 @@ box [expr {$basex+18.65}]um [expr {$basey-6.5}]um [expr {$basex+21.6}]um [expr {
 paint metal1
 box [expr {$basex+21.6}]um [expr {$basey-6.5}]um [expr {$basex+37.44}]um [expr {$basey-5.38}]um
 paint metal1
+box [expr {$basex+36}]um [expr {$basey-6.5}]um [expr {$basex+37}]um [expr {$basey-5.5}]um
+label VSource south metal1
 
 # Routing
 box [expr {$basex+16}]um [expr {$basey+0.08}]um [expr {$basex+18.4}]um [expr {$basey+0.58}]um
@@ -114,7 +116,8 @@ paint metal1
 # Level Shifting Stage
 # -------------------------------------
 # Instantiation
-box -21.275um -5.8um -5um 1um
+set basex [expr {$basex-1.67}]
+box [expr {$basex-21.275}]um -5.8um [expr {$basex-5}]um 1um
 getcell boot_ls_stage.mag
 
 # Routing
@@ -130,21 +133,17 @@ box [expr {$basex-7}]um [expr {$basey+5.59}]um [expr {$basex-1.3}]um [expr {$bas
 paint metal2
 box [expr {$basex-1.8}]um [expr {$basey-0.56}]um [expr {$basex-1.3}]um [expr {$basey+6.09}]um
 paint metal2
-box [expr {$basex-1.8}]um [expr {$basey-0.06}]um [expr {$basex+16.58}]um [expr {$basey-0.56}]um
+box [expr {$basex-1.8}]um [expr {$basey-0.06}]um [expr {$basex+18.25}]um [expr {$basey-0.56}]um
 paint metal2
-box [expr {$basex+13.9}]um [expr {$basey-0.46}]um [expr {$basex+16.48}]um [expr {$basey-0.16}]um
+box [expr {$basex+15.57}]um [expr {$basey-0.46}]um [expr {$basex+18.15}]um [expr {$basey-0.16}]um
 paint m2contact
 
 # Supply
-box [expr {$basex-16.26}]um [expr {$basey+12}]um [expr {$basex+1}]um [expr {$basey+13}]um
+box [expr {$basex-16.26}]um [expr {$basey+12}]um [expr {$basex+3}]um [expr {$basey+13}]um
 paint metal1
 box [expr {$basex-16.26}]um [expr {$basey+12}]um [expr {$basex-15.26}]um [expr {$basey+13}]um
 label VBOOT north metal1
 
-box [expr {$basex-1.04}]um [expr {$basey-7.26}]um [expr {$basex+38.71}]um [expr {$basey-8.26}]um
-paint metal1
-box [expr {$basex+37.71}]um [expr {$basey-7.26}]um [expr {$basex+38.71}]um [expr {$basey-8.26}]um
-label VSource south metal1
 
 
 save driver_bootstrap.mag

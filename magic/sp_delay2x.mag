@@ -1,0 +1,36 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1700082010
+<< nwell >>
+rect 0 309 5760 971
+<< locali >>
+rect 309 857 365 1121
+rect 5537 975 5846 1017
+rect 67 377 101 411
+rect 5786 305 5846 975
+rect 252 263 286 297
+rect 5647 263 5846 305
+rect 67 159 101 193
+<< metal1 >>
+rect -300 1184 38 1280
+rect -300 96 -200 1184
+rect -300 0 38 96
+use sp_delay  sp_delay_0
+timestamp 1700081908
+transform 1 0 38 0 1 48
+box -38 -48 5722 592
+use sp_delay_rot  sp_delay_rot_0
+timestamp 1700012610
+transform 1 0 38 0 1 688
+box -38 -48 5722 592
+<< labels >>
+rlabel locali 67 377 101 411 5 VCC
+port 1 s
+rlabel locali 67 159 101 193 5 VSS
+port 2 s
+rlabel locali 252 263 286 297 5 VIN
+port 3 s
+rlabel locali 309 857 365 1121 5 VOUT
+port 4 s
+<< end >>

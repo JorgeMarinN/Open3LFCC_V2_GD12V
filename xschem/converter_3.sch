@@ -37,7 +37,7 @@ C {sky130_fd_pr/diode.sym} 270 -260 1 1 {name=D3
 model=diode_pw2nd_05v5
 area=1e12
 }
-C {sky130_fd_pr/cap_mim_m3_2.sym} 480 -230 0 0 {name=C1 model=cap_mim_m3_2 W=210 L=420 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_2.sym} 480 -230 2 0 {name=C1 model=cap_mim_m3_2 W=210 L=420 MF=1 spiceprefix=X}
 C {devices/iopin.sym} 120 -260 2 0 {name=p16 lab=V5v0LS}
 C {devices/iopin.sym} 120 -120 2 0 {name=p18 lab=V1v8}
 C {devices/iopin.sym} 260 -40 2 0 {name=p19 lab=GND}

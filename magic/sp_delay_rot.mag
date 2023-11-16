@@ -1,0 +1,65 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1700012610
+<< pwell >>
+rect 3 349 5681 506
+<< locali >>
+rect 5609 491 5667 527
+rect 271 329 327 433
+rect 5621 399 5655 433
+rect 75 287 327 329
+rect 979 287 1175 329
+rect 1883 287 2079 329
+rect 2787 287 2983 329
+rect 3691 287 3887 329
+rect 4595 287 4791 329
+rect 5436 295 5470 329
+rect 271 169 327 287
+rect 5621 181 5655 215
+rect 5609 17 5667 53
+<< metal1 >>
+rect 0 496 5684 592
+rect 0 -48 5684 48
+use sky130_fd_sc_hd__clkdlybuf4s50_2  sky130_fd_sc_hd__clkdlybuf4s50_2_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1691438616
+transform -1 0 5516 0 -1 544
+box -38 -48 866 592
+use sky130_fd_sc_hd__clkdlybuf4s50_2  sky130_fd_sc_hd__clkdlybuf4s50_2_1
+timestamp 1691438616
+transform -1 0 4612 0 -1 544
+box -38 -48 866 592
+use sky130_fd_sc_hd__clkdlybuf4s50_2  sky130_fd_sc_hd__clkdlybuf4s50_2_2
+timestamp 1691438616
+transform -1 0 3708 0 -1 544
+box -38 -48 866 592
+use sky130_fd_sc_hd__clkdlybuf4s50_2  sky130_fd_sc_hd__clkdlybuf4s50_2_3
+timestamp 1691438616
+transform -1 0 2804 0 -1 544
+box -38 -48 866 592
+use sky130_fd_sc_hd__clkdlybuf4s50_2  sky130_fd_sc_hd__clkdlybuf4s50_2_4
+timestamp 1691438616
+transform -1 0 1900 0 -1 544
+box -38 -48 866 592
+use sky130_fd_sc_hd__clkdlybuf4s50_2  sky130_fd_sc_hd__clkdlybuf4s50_2_5
+timestamp 1691438616
+transform -1 0 996 0 -1 544
+box -38 -48 866 592
+use sky130_fd_sc_hd__tap_1  sky130_fd_sc_hd__tap_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1691438616
+transform -1 0 5684 0 -1 544
+box -38 -48 130 592
+use sky130_fd_sc_hd__tap_1  sky130_fd_sc_hd__tap_1_1
+timestamp 1691438616
+transform -1 0 92 0 -1 544
+box -38 -48 130 592
+<< labels >>
+rlabel locali 5621 181 5655 215 1 VCC
+port 1 s
+rlabel locali 5621 399 5655 433 1 VSS
+port 2 s
+rlabel locali 5436 295 5470 329 1 VIN
+port 3 s
+rlabel locali 271 169 327 433 1 VOUT
+port 4 s
+<< end >>

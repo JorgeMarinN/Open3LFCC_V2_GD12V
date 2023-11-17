@@ -3,7 +3,7 @@
 #   AC3E - UTFSM      	#
 #   Project: 3LFCC v.2 	#
 #   Bootstrap driver	#
-#   10-11-2023        	#
+#   13-11-2023        	#
 # #####################	#
 
 drc style drc(full)
@@ -38,6 +38,8 @@ box [expr {$basex+18.65}]um [expr {$basey-6.5}]um [expr {$basex+21.6}]um [expr {
 paint metal1
 box [expr {$basex+21.6}]um [expr {$basey-6.5}]um [expr {$basex+37.44}]um [expr {$basey-5.38}]um
 paint metal1
+box [expr {$basex+36}]um [expr {$basey-6.5}]um [expr {$basex+37}]um [expr {$basey-5.5}]um
+label VSource south metal1
 
 # Routing
 box [expr {$basex+16}]um [expr {$basey+0.08}]um [expr {$basex+18.4}]um [expr {$basey+0.58}]um
@@ -114,37 +116,80 @@ paint metal1
 # Level Shifting Stage
 # -------------------------------------
 # Instantiation
-box -21.275um -5.8um -5um 1um
+set basex [expr {$basex-1.67}]
+box [expr {$basex-21.275}]um -5.8um [expr {$basex-5}]um 1um
 getcell boot_ls_stage.mag
 
 # Routing
-box [expr {$basex-7}]um [expr {$basey+4.95}]um [expr {$basex-2}]um [expr {$basey+5.45}]um
+box [expr {$basex-7}]um [expr {$basey+4.95}]um [expr {$basex-1}]um [expr {$basey+5.45}]um
 paint metal2
-box [expr {$basex-2.5}]um [expr {$basey-0.56}]um [expr {$basex-2}]um [expr {$basey+5.45}]um
+box [expr {$basex-1.5}]um [expr {$basey-0.56}]um [expr {$basex-1}]um [expr {$basey+5.45}]um
 paint metal2
-box [expr {$basex-2.4}]um [expr {$basey-0.16}]um [expr {$basex-2.1}]um [expr {$basey-0.46}]um
+box [expr {$basex-1.4}]um [expr {$basey-0.16}]um [expr {$basex-1.1}]um [expr {$basey-0.46}]um
 paint m2contact
-box [expr {$basex-2.5}]um [expr {$basey-0.06}]um [expr {$basex+7.37}]um [expr {$basey-0.56}]um
+box [expr {$basex-1.5}]um [expr {$basey-0.06}]um [expr {$basex+7.37}]um [expr {$basey-0.56}]um
 paint metal1
-box [expr {$basex-7}]um [expr {$basey+5.59}]um [expr {$basex-1.3}]um [expr {$basey+6.09}]um
+box [expr {$basex-7}]um [expr {$basey+5.59}]um [expr {$basex-0.3}]um [expr {$basey+6.09}]um
 paint metal2
-box [expr {$basex-1.8}]um [expr {$basey-0.56}]um [expr {$basex-1.3}]um [expr {$basey+6.09}]um
+box [expr {$basex-0.8}]um [expr {$basey-0.56}]um [expr {$basex-0.3}]um [expr {$basey+6.09}]um
 paint metal2
-box [expr {$basex-1.8}]um [expr {$basey-0.06}]um [expr {$basex+16.58}]um [expr {$basey-0.56}]um
+box [expr {$basex-0.8}]um [expr {$basey-0.06}]um [expr {$basex+18.25}]um [expr {$basey-0.56}]um
 paint metal2
-box [expr {$basex+13.9}]um [expr {$basey-0.46}]um [expr {$basex+16.48}]um [expr {$basey-0.16}]um
+box [expr {$basex+15.57}]um [expr {$basey-0.46}]um [expr {$basex+18.15}]um [expr {$basey-0.16}]um
 paint m2contact
 
 # Supply
-box [expr {$basex-16.26}]um [expr {$basey+12}]um [expr {$basex+1}]um [expr {$basey+13}]um
+box [expr {$basex-16.26}]um [expr {$basey+12}]um [expr {$basex+3}]um [expr {$basey+13}]um
 paint metal1
 box [expr {$basex-16.26}]um [expr {$basey+12}]um [expr {$basex-15.26}]um [expr {$basey+13}]um
 label VBOOT north metal1
 
-box [expr {$basex-1.04}]um [expr {$basey-7.26}]um [expr {$basex+38.71}]um [expr {$basey-8.26}]um
+
+# -------------------------------------
+# Short Pulse Generator
+# -------------------------------------
+set basex [expr {$basex+1.67}]
+box [expr {$basex-16.7}]um [expr {$basey+14}]um [expr {$basex-15.7}]um [expr {$basey+15}]um
+getcell short_pulse_generator.mag
+rotate -90
+upsidedown
+
+box [expr {$basex-7}]um [expr {$basey-5.8}]um [expr {$basex-4}]um [expr {$basey-0.445}]um
 paint metal1
-box [expr {$basex+37.71}]um [expr {$basey-7.26}]um [expr {$basex+38.71}]um [expr {$basey-8.26}]um
-label VSource south metal1
+box [expr {$basex-6}]um [expr {$basey-5.8}]um [expr {$basex-4}]um [expr {$basey+11}]um
+paint metal1
+box [expr {$basex-5.9}]um [expr {$basey+10.1}]um [expr {$basex-4.1}]um [expr {$basey+10.9}]um
+paint m2contact
+box [expr {$basex-6}]um [expr {$basey+10}]um [expr {$basex-4}]um [expr {$basey+14.48}]um
+paint metal2
+box [expr {$basex-5.9}]um [expr {$basey+14.1}]um [expr {$basex-4.1}]um [expr {$basey+14.38}]um
+paint m2contact
+
+box [expr {$basex-16.5}]um [expr {$basey+2.32}]um [expr {$basex-14.5}]um [expr {$basey+2.82}]um
+paint metal3
+box [expr {$basex-16.4}]um [expr {$basey+2.42}]um [expr {$basex-14.6}]um [expr {$basey+2.72}]um
+paint m3contact
+box [expr {$basex-15}]um [expr {$basey+2.32}]um [expr {$basex-14.5}]um [expr {$basey+17.4}]um
+paint metal3
+box [expr {$basex-15}]um [expr {$basey+16.9}]um [expr {$basex-12}]um [expr {$basey+17.4}]um
+paint metal3
+box [expr {$basex-12.4}]um [expr {$basey+16.9}]um [expr {$basex-11.9}]um [expr {$basey+17.4}]um
+paint {metal1, metal2, metal3}
+box [expr {$basex-12.3}]um [expr {$basey+17}]um [expr {$basex-12}]um [expr {$basey+17.3}]um
+paint {m2contact, m3contact}
+
+box [expr {$basex-12.5}]um [expr {$basey+2.32}]um [expr {$basex-10.5}]um [expr {$basey+2.82}]um
+paint metal3
+box [expr {$basex-12.4}]um [expr {$basey+2.42}]um [expr {$basex-10.6}]um [expr {$basey+2.72}]um
+paint m3contact
+box [expr {$basex-11.5}]um [expr {$basey+2.32}]um [expr {$basex-11}]um [expr {$basey+23.3}]um
+paint metal3
+box [expr {$basex-15.5}]um [expr {$basey+22.8}]um [expr {$basex-11}]um [expr {$basey+23.3}]um
+paint metal3
+box [expr {$basex-15.5}]um [expr {$basey+22.8}]um [expr {$basex-15}]um [expr {$basey+23.3}]um
+paint {metal1, metal2, metal3}
+box [expr {$basex-15.4}]um [expr {$basey+22.9}]um [expr {$basex-15.1}]um [expr {$basey+23.2}]um
+paint {m2contact, m3contact}
 
 
 save driver_bootstrap.mag

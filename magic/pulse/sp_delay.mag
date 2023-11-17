@@ -1,0 +1,53 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1700230441
+<< pwell >>
+rect 3 38 5681 195
+<< locali >>
+rect 17 491 75 527
+rect 5609 491 5667 527
+rect 893 215 1089 257
+rect 1797 215 1993 257
+rect 2701 215 2897 257
+rect 3605 215 3801 257
+rect 4509 215 4705 257
+rect 5413 215 5609 257
+rect 17 17 75 53
+rect 5609 17 5667 53
+<< metal1 >>
+rect 0 496 5684 592
+rect 0 -48 5684 48
+use sky130_fd_sc_hd__clkdlybuf4s50_2  sky130_fd_sc_hd__clkdlybuf4s50_2_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1683767628
+transform 1 0 168 0 1 0
+box -38 -48 866 592
+use sky130_fd_sc_hd__clkdlybuf4s50_2  sky130_fd_sc_hd__clkdlybuf4s50_2_1
+timestamp 1683767628
+transform 1 0 1072 0 1 0
+box -38 -48 866 592
+use sky130_fd_sc_hd__clkdlybuf4s50_2  sky130_fd_sc_hd__clkdlybuf4s50_2_2
+timestamp 1683767628
+transform 1 0 1976 0 1 0
+box -38 -48 866 592
+use sky130_fd_sc_hd__clkdlybuf4s50_2  sky130_fd_sc_hd__clkdlybuf4s50_2_3
+timestamp 1683767628
+transform 1 0 2880 0 1 0
+box -38 -48 866 592
+use sky130_fd_sc_hd__clkdlybuf4s50_2  sky130_fd_sc_hd__clkdlybuf4s50_2_4
+timestamp 1683767628
+transform 1 0 3784 0 1 0
+box -38 -48 866 592
+use sky130_fd_sc_hd__clkdlybuf4s50_2  sky130_fd_sc_hd__clkdlybuf4s50_2_5
+timestamp 1683767628
+transform 1 0 4688 0 1 0
+box -38 -48 866 592
+use sky130_fd_sc_hd__tap_1  sky130_fd_sc_hd__tap_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1683767628
+transform 1 0 0 0 1 0
+box -38 -48 130 592
+use sky130_fd_sc_hd__tap_1  sky130_fd_sc_hd__tap_1_1
+timestamp 1683767628
+transform 1 0 5592 0 1 0
+box -38 -48 130 592
+<< end >>

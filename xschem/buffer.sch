@@ -157,5 +157,5 @@ spiceprefix=X
 C {devices/iopin.sym} 100 -290 2 0 {name=p1 lab=VDD}
 C {devices/iopin.sym} 100 -110 2 0 {name=p4 lab=VSS}
 C {devices/iopin.sym} 180 -50 1 0 {name=p2 lab=Q}
-C {devices/iopin.sym} 340 -50 1 0 {name=p3 lab=NQ}
+C {devices/iopin.sym} 340 -50 1 0 {name=p3 lab=QN}
 C {devices/iopin.sym} 620 -200 0 0 {name=p5 lab=VOUT}

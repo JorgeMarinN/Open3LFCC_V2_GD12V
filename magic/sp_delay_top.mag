@@ -1,0 +1,50 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1700235978
+<< checkpaint >>
+rect -3409 6748 4484 7028
+rect -3409 6413 10354 6748
+rect -3709 -1965 10354 6413
+rect -3565 -3388 10354 -1965
+rect -3565 -3669 4518 -3388
+rect -3565 -3773 4333 -3669
+<< locali >>
+rect 523 3055 552 3096
+rect 223 2439 523 2481
+rect 223 2009 283 2439
+rect 223 1967 523 2009
+rect 223 1351 523 1393
+rect 223 921 283 1351
+rect 223 879 523 921
+rect 367 377 401 411
+rect 552 263 586 297
+rect 367 159 401 193
+<< metal1 >>
+rect 6022 2720 6422 2816
+rect 6322 1728 6422 2720
+rect 6022 1632 6422 1728
+rect 6322 640 6422 1632
+rect 6022 544 6422 640
+use sp_delay2x  sp_delay2x_0
+timestamp 1700230572
+transform 1 0 300 0 1 0
+box -300 0 5846 1184
+use sp_delay2x  sp_delay2x_1
+timestamp 1700230572
+transform 1 0 300 0 1 1088
+box -300 0 5846 1184
+use sp_delay2x  sp_delay2x_2
+timestamp 1700230572
+transform 1 0 300 0 1 2176
+box -300 0 5846 1184
+<< labels >>
+rlabel locali 367 377 401 411 5 VCC
+port 1 s
+rlabel locali 367 159 401 193 5 VSS
+port 2 s
+rlabel locali 552 263 586 297 5 VIN
+port 3 s
+rlabel locali 523 3055 552 3096 5 VOUT
+port 4 s
+<< end >>

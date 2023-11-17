@@ -1,12 +1,54 @@
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/converter_3.sch
+.subckt converter_3 V5v0LS V1v8 GND D1 S1 Vout V10v0 D2
+*.PININFO V5v0LS:B V1v8:B GND:B D1:B S1:B Vout:B V10v0:B D2:B
+x1 Vboot S1 Vout V5v0LS V1v8 GND D1 driver_bootstrap
+D3 V5v0LS Vboot sky130_fd_pr__diode_pw2nd_05v5 area=1e12 pj=4e6
+XC1 Vout Vboot sky130_fd_pr__cap_mim_m3_2 W=210 L=420 m=1
+x2 V10v0 S1 Vout S2 GND power_stage_3
+x3 V5v0LS V1v8 S2 D2 GND level_shifter
+XC2 Vboot Vout sky130_fd_pr__cap_mim_m3_1 W=210 L=420 m=1
+.ends
+
+* expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/driver_bootstrap.sym # of pins=7
+** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/driver_bootstrap.sym
 ** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/driver_bootstrap.sch
-.subckt driver_bootstrap Gate V5v0LS DIN V1v8 GND Source Vboot
+.subckt driver_bootstrap Vboot Gate Source V5v0LS V1v8 GND DIN
 *.PININFO Gate:B V5v0LS:B DIN:B V1v8:B GND:B Source:B Vboot:B
 x3 Vboot V5v0LS SET RESET GND VFE VRE boot_ls_stage
-x2 V1v8 GND VFE DIN VRE short_pulse_generator
+x2 V1v8 GND VFE DIN VRE pulse_generator
 x1 Vboot Gate Source QN Q buffer
 x4 Vboot RESET QN Q Source nand_5v
 x5 Vboot SET Q QN Source nand_5v
 .ends
+
+
+* expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/power_stage_3.sym # of pins=5
+** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/power_stage_3.sym
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/power_stage_3.sch
+.subckt power_stage_3 VDD S1 Vout S2 VSS
+*.PININFO S1:B Vout:B VDD:B VSS:B S2:B
+XM1 VDD S1 Vout Vout sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4.38 nf=1 m=2520
+XM2 Vout S2 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4.38 nf=1 m=2520
+.ends
+
+
+* expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/level_shifter.sym # of pins=5
+** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/level_shifter.sym
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/level_shifter.sch
+.subckt level_shifter VH VDD OUT IN VSS
+*.PININFO IN:I VDD:B VH:B OUT:O VSS:B
+XM11 net1 IN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=5
+XM12 net1 IN VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=5
+XM15 net2 net3 VH VH sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM14 net3 net2 VH VH sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM16 net4 net2 VH VH sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=10 nf=1 m=10
+XM18 net2 net1 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=3
+XM13 net3 IN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=3
+XM17 net4 IN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=10 nf=1 m=10
+XM7 OUT net4 VH VH sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=20 nf=1 m=20
+XM10 OUT net4 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=20 nf=1 m=20
+.ends
+
 
 * expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/boot_ls_stage.sym # of pins=7
 ** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/boot_ls_stage.sym
@@ -33,10 +75,10 @@ XR5 net4 net8 GND sky130_fd_pr__res_xhigh_po_0p35 L=2.612 mult=1 m=1
 .ends
 
 
-* expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/short_pulse_generator.sym # of pins=5
-** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/short_pulse_generator.sym
-** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/short_pulse_generator.sch
-.subckt short_pulse_generator VCC VSS VFE VIN VRE
+* expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/pulse_generator.sym # of pins=5
+** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/pulse_generator.sym
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/pulse_generator.sch
+.subckt pulse_generator VCC VSS VFE VIN VRE
 *.PININFO VIN:B VFE:B VRE:B VCC:B VSS:B
 x3 net3 VSS VSS VCC VCC predly sky130_fd_sc_hd__inv_1
 x4 predly VSS VSS VCC VCC net2 sky130_fd_sc_hd__inv_1

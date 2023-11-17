@@ -45,7 +45,7 @@ C {devices/lab_pin.sym} 320 -120 0 1 {name=l4 sig_type=std_logic lab=VRE}
 C {devices/lab_pin.sym} 340 -360 2 0 {name=l5 sig_type=std_logic lab=RESET}
 C {devices/lab_pin.sym} 340 -400 2 0 {name=l6 sig_type=std_logic lab=SET}
 C {/foss/designs/Open3LFCC_V2_GD12V/xschem/boot_ls_stage.sym} 220 -380 0 0 {name=x3}
-C {/foss/designs/Open3LFCC_V2_GD12V/xschem/pulse_generator.sym} 200 -140 0 0 {name=x2}
+C {/foss/designs/Open3LFCC_V2_GD12V/xschem/short_pulse_generator.sym} 200 -140 0 0 {name=x2}
 C {/foss/designs/Open3LFCC_V2_GD12V/xschem/buffer.sym} 620 -400 0 0 {name=x1}
 C {/foss/designs/Open3LFCC_V2_GD12V/xschem/nand_5v.sym} 840 -140 0 0 {name=x4}
 C {/foss/designs/Open3LFCC_V2_GD12V/xschem/nand_5v.sym} 540 -140 0 0 {name=x5}

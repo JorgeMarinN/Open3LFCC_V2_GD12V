@@ -1,0 +1,30 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1700229750
+<< locali >>
+rect 223 2631 523 2673
+rect 223 2201 283 2631
+rect 223 2159 523 2201
+rect 223 1447 523 1489
+rect 223 1017 283 1447
+rect 223 975 523 1017
+<< metal1 >>
+rect 6022 2912 6422 3104
+rect 6322 1920 6422 2912
+rect 6022 1728 6422 1920
+rect 6322 736 6422 1728
+rect 6022 544 6422 736
+use sp_delay2x  sp_delay2x_0
+timestamp 1700082010
+transform 1 0 300 0 1 0
+box -300 0 5846 1280
+use sp_delay2x  sp_delay2x_1
+timestamp 1700082010
+transform 1 0 300 0 1 1184
+box -300 0 5846 1280
+use sp_delay2x  sp_delay2x_2
+timestamp 1700082010
+transform 1 0 300 0 1 2368
+box -300 0 5846 1280
+<< end >>

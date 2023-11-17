@@ -54,50 +54,6 @@ VNB                                        |VNB
 Cell pin lists are equivalent.
 Device classes sky130_fd_sc_hd__clkdlybuf4s50_2 and sky130_fd_sc_hd__clkdlybuf4s50_2 are equivalent.
 
-Circuit 1 cell sky130_fd_pr__pfet_g5v0d10v5 and Circuit 2 cell sky130_fd_pr__pfet_g5v0d10v5 are black boxes.
-Warning: Equate pins:  cell sky130_fd_pr__pfet_g5v0d10v5 is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__pfet_g5v0d10v5 is a placeholder, treated as a black box.
-
-Subcircuit pins:
-Circuit 1: sky130_fd_pr__pfet_g5v0d10v5    |Circuit 2: sky130_fd_pr__pfet_g5v0d10v5    
--------------------------------------------|-------------------------------------------
-1                                          |1                                          
-2                                          |2                                          
-3                                          |3                                          
-4                                          |4                                          
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes sky130_fd_pr__pfet_g5v0d10v5 and sky130_fd_pr__pfet_g5v0d10v5 are equivalent.
-
-Circuit 1 cell sky130_fd_pr__nfet_g5v0d10v5 and Circuit 2 cell sky130_fd_pr__nfet_g5v0d10v5 are black boxes.
-Warning: Equate pins:  cell sky130_fd_pr__nfet_g5v0d10v5 is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__nfet_g5v0d10v5 is a placeholder, treated as a black box.
-
-Subcircuit pins:
-Circuit 1: sky130_fd_pr__nfet_g5v0d10v5    |Circuit 2: sky130_fd_pr__nfet_g5v0d10v5    
--------------------------------------------|-------------------------------------------
-1                                          |1                                          
-2                                          |2                                          
-3                                          |3                                          
-4                                          |4                                          
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes sky130_fd_pr__nfet_g5v0d10v5 and sky130_fd_pr__nfet_g5v0d10v5 are equivalent.
-
-Circuit 1 cell sky130_fd_pr__res_xhigh_po_0p35 and Circuit 2 cell sky130_fd_pr__res_xhigh_po_0p35 are black boxes.
-Warning: Equate pins:  cell sky130_fd_pr__res_xhigh_po_0p35 is a placeholder, treated as a black box.
-Warning: Equate pins:  cell sky130_fd_pr__res_xhigh_po_0p35 is a placeholder, treated as a black box.
-
-Subcircuit pins:
-Circuit 1: sky130_fd_pr__res_xhigh_po_0p35 |Circuit 2: sky130_fd_pr__res_xhigh_po_0p35 
--------------------------------------------|-------------------------------------------
-1                                          |1                                          
-2                                          |2                                          
-3                                          |3                                          
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes sky130_fd_pr__res_xhigh_po_0p35 and sky130_fd_pr__res_xhigh_po_0p35 are equivalent.
-
 Subcircuit summary:
 Circuit 1: sky130_fd_sc_hd__inv_1          |Circuit 2: sky130_fd_sc_hd__inv_1          
 -------------------------------------------|-------------------------------------------
@@ -196,45 +152,13 @@ VNB                                        |VNB
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_sc_hd__and2_2 and sky130_fd_sc_hd__and2_2 are equivalent.
-
-Class boot_ls_stage (0):  Merged 4 series devices.
-Class boot_ls_stage (1):  Merged 11 parallel devices.
-Class boot_ls_stage (1):  Merged 4 series devices.
-Subcircuit summary:
-Circuit 1: boot_ls_stage                   |Circuit 2: boot_ls_stage                   
--------------------------------------------|-------------------------------------------
-sky130_fd_pr__pfet_g5v0d10v5 (8)           |sky130_fd_pr__pfet_g5v0d10v5 (8)           
-sky130_fd_pr__nfet_g5v0d10v5 (15->4)       |sky130_fd_pr__nfet_g5v0d10v5 (15->4)       
-sky130_fd_pr__res_xhigh_po_0p35 (5->1)     |sky130_fd_pr__res_xhigh_po_0p35 (5->1)     
-Number of devices: 13                      |Number of devices: 13                      
-Number of nets: 11                         |Number of nets: 11                         
----------------------------------------------------------------------------------------
-Resolving symmetries by property value.
-Resolving symmetries by pin name.
-Netlists match uniquely with port errors.
-
-Subcircuit pins:
-Circuit 1: boot_ls_stage                   |Circuit 2: boot_ls_stage                   
--------------------------------------------|-------------------------------------------
-V5v0LS                                     |(no matching pin)                          
-VFE                                        |VFE                                        
-VRE                                        |VRE                                        
-GND                                        |GND                                        
-Vboot                                      |Vboot                                      
-SET                                        |SET                                        
-RESET                                      |RESET                                      
-(no matching pin)                          |w_n1158_n782#                              
-V5v0LS                                     |(no matching pin)                          
----------------------------------------------------------------------------------------
-Cell pin lists for boot_ls_stage and boot_ls_stage altered to match.
-Device classes boot_ls_stage and boot_ls_stage are equivalent.
-  Flattening non-matched subcircuits boot_ls_stage boot_ls_stage
 Flattening unmatched subcell sp_delay_top in circuit short_pulse_generator (1)(1 instance)
 Flattening unmatched subcell sp_delay2x in circuit short_pulse_generator (1)(3 instances)
-Flattening unmatched subcell sp_delay in circuit short_pulse_generator (1)(6 instances)
+Flattening unmatched subcell sp_delay_rot in circuit short_pulse_generator (1)(3 instances)
+Flattening unmatched subcell sp_delay in circuit short_pulse_generator (1)(3 instances)
 
 Subcircuit summary:
-Circuit 1: short_pulse_generator           |Circuit 2: short_pulse_generator           
+Circuit 1: pulse_generator                 |Circuit 2: short_pulse_generator           
 -------------------------------------------|-------------------------------------------
 sky130_fd_sc_hd__inv_1 (4)                 |sky130_fd_sc_hd__inv_1 (4)                 
 sky130_fd_sc_hd__inv_2 (1)                 |sky130_fd_sc_hd__inv_2 (1)                 
@@ -247,7 +171,7 @@ Number of nets: 47                         |Number of nets: 47
 Netlists match uniquely.
 
 Subcircuit pins:
-Circuit 1: short_pulse_generator           |Circuit 2: short_pulse_generator           
+Circuit 1: pulse_generator                 |Circuit 2: short_pulse_generator           
 -------------------------------------------|-------------------------------------------
 VIN                                        |Vin                                        
 VRE                                        |VRE                                        
@@ -256,86 +180,7 @@ VSS                                        |VSS
 VCC                                        |VCC                                        
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
-Device classes short_pulse_generator and short_pulse_generator are equivalent.
+Device classes pulse_generator and short_pulse_generator are equivalent.
 
-Class buffer (1):  Merged 34 parallel devices.
-Subcircuit summary:
-Circuit 1: buffer                          |Circuit 2: buffer                          
--------------------------------------------|-------------------------------------------
-sky130_fd_pr__pfet_g5v0d10v5 (20->3)       |sky130_fd_pr__pfet_g5v0d10v5 (20->3)       
-sky130_fd_pr__nfet_g5v0d10v5 (20->3)       |sky130_fd_pr__nfet_g5v0d10v5 (20->3)       
-Number of devices: 6                       |Number of devices: 6                       
-Number of nets: 7                          |Number of nets: 7                          
----------------------------------------------------------------------------------------
-Netlists match uniquely with port errors.
-
-Subcircuit pins:
-Circuit 1: buffer                          |Circuit 2: buffer                          
--------------------------------------------|-------------------------------------------
-Q                                          |Q                                          
-QN                                         |QN                                         
-VOUT                                       |(no matching pin)                          
-VDD                                        |VDD                                        
-VSS                                        |VSS                                        
-VOUT                                       |(no matching pin)                          
----------------------------------------------------------------------------------------
-Cell pin lists for buffer and buffer altered to match.
-Device classes buffer and buffer are equivalent.
-  Flattening non-matched subcircuits buffer buffer
-
-Subcircuit summary:
-Circuit 1: nand_5v                         |Circuit 2: nand_5v                         
--------------------------------------------|-------------------------------------------
-sky130_fd_pr__nfet_g5v0d10v5 (2)           |sky130_fd_pr__nfet_g5v0d10v5 (2)           
-sky130_fd_pr__pfet_g5v0d10v5 (2)           |sky130_fd_pr__pfet_g5v0d10v5 (2)           
-Number of devices: 4                       |Number of devices: 4                       
-Number of nets: 6                          |Number of nets: 6                          
----------------------------------------------------------------------------------------
-Netlists match uniquely.
-
-Subcircuit pins:
-Circuit 1: nand_5v                         |Circuit 2: nand_5v                         
--------------------------------------------|-------------------------------------------
-VDD                                        |VDD                                        
-VSS                                        |VSS                                        
-NAND                                       |NAND                                       
-A                                          |A                                          
-B                                          |B                                          
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes nand_5v and nand_5v are equivalent.
-
-Subcircuit summary:
-Circuit 1: driver_bootstrap                |Circuit 2: driver_bootstrap                
--------------------------------------------|-------------------------------------------
-sky130_fd_pr__pfet_g5v0d10v5 (28->11)      |sky130_fd_pr__pfet_g5v0d10v5 (28->11)      
-sky130_fd_pr__nfet_g5v0d10v5 (35->7)       |sky130_fd_pr__nfet_g5v0d10v5 (35->7)       
-sky130_fd_pr__res_xhigh_po_0p35 (1)        |sky130_fd_pr__res_xhigh_po_0p35 (1)        
-short_pulse_generator (1)                  |short_pulse_generator (1)                  
-nand_5v (2)                                |nand_5v (2)                                
-Number of devices: 22                      |Number of devices: 22                      
-Number of nets: 19                         |Number of nets: 19                         
----------------------------------------------------------------------------------------
-Netlists match uniquely with port errors.
-
-Subcircuit pins:
-Circuit 1: driver_bootstrap                |Circuit 2: driver_bootstrap                
--------------------------------------------|-------------------------------------------
-Source                                     |(no matching pin)                          
-Gate                                       |(no matching pin)                          
-GND                                        |(no matching pin)                          
-V1v8                                       |(no matching pin)                          
-DIN                                        |(no pins) **Mismatch**                     
-V5v0LS                                     |(no matching pin)                          
-Vboot                                      |(no matching pin)                          
-Gate                                       |(no matching pin)                          
-V5v0LS                                     |(no matching pin)                          
-V1v8                                       |(no matching pin)                          
-GND                                        |(no matching pin)                          
-Source                                     |(no matching pin)                          
-Vboot                                      |(no matching pin)                          
----------------------------------------------------------------------------------------
-Cell pin lists for driver_bootstrap and driver_bootstrap altered to match.
-Device classes driver_bootstrap and driver_bootstrap are equivalent.
-
-Final result: Top level cell failed pin matching.
+Final result: Circuits match uniquely.
+.

@@ -1,0 +1,93 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1700224646
+<< nwell >>
+rect 682 261 740 582
+<< locali >>
+rect 220 215 480 263
+rect 680 257 720 961
+rect 540 256 720 257
+rect 540 222 680 256
+rect 714 222 720 256
+rect 540 215 720 222
+rect 1960 220 2160 262
+rect 2200 220 2400 262
+<< viali >>
+rect 680 222 714 256
+rect 1000 222 1100 256
+rect 1620 220 1654 254
+rect 1840 220 1874 254
+<< metal1 >>
+rect 0 496 3020 680
+rect 660 260 734 280
+rect 980 260 1120 280
+rect 660 256 1120 260
+rect 660 222 680 256
+rect 714 222 1000 256
+rect 1100 222 1120 256
+rect 660 220 1120 222
+rect 660 200 734 220
+rect 980 200 1120 220
+rect 1600 270 1680 280
+rect 1600 210 1610 270
+rect 1670 210 1680 270
+rect 1600 200 1680 210
+rect 1820 270 1900 280
+rect 1820 210 1830 270
+rect 1890 210 1900 270
+rect 1820 200 1900 210
+rect 0 -48 3020 48
+<< via1 >>
+rect 1610 254 1670 270
+rect 1610 220 1620 254
+rect 1620 220 1654 254
+rect 1654 220 1670 254
+rect 1610 210 1670 220
+rect 1830 254 1890 270
+rect 1830 220 1840 254
+rect 1840 220 1874 254
+rect 1874 220 1890 254
+rect 1830 210 1890 220
+<< metal2 >>
+rect 1580 270 1700 300
+rect 1580 210 1610 270
+rect 1670 210 1700 270
+rect 1580 180 1700 210
+rect 1800 270 1920 300
+rect 1800 210 1830 270
+rect 1890 210 1920 270
+rect 1800 180 1920 210
+use sky130_fd_sc_hd__and2_2  sky130_fd_sc_hd__and2_2_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1683767628
+transform 1 0 2308 0 1 0
+box -38 -48 590 592
+use sky130_fd_sc_hd__inv_1  sky130_fd_sc_hd__inv_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1683767628
+transform 1 0 368 0 1 0
+box -38 -48 314 592
+use sky130_fd_sc_hd__inv_1  sky130_fd_sc_hd__inv_1_1
+timestamp 1683767628
+transform 1 0 1756 0 1 0
+box -38 -48 314 592
+use sky130_fd_sc_hd__inv_1  sky130_fd_sc_hd__inv_1_2
+timestamp 1683767628
+transform 1 0 2032 0 1 0
+box -38 -48 314 592
+use sky130_fd_sc_hd__inv_2  sky130_fd_sc_hd__inv_2_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1683767628
+transform 1 0 92 0 1 0
+box -38 -48 314 592
+use sky130_fd_sc_hd__inv_8  sky130_fd_sc_hd__inv_8_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1683767628
+transform 1 0 852 0 1 0
+box -38 -48 866 592
+use sky130_fd_sc_hd__tap_1  sky130_fd_sc_hd__tap_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1683767628
+transform 1 0 0 0 1 0
+box -38 -48 130 592
+use sky130_fd_sc_hd__tap_1  sky130_fd_sc_hd__tap_1_1
+timestamp 1683767628
+transform 1 0 760 0 1 0
+box -38 -48 130 592
+<< end >>

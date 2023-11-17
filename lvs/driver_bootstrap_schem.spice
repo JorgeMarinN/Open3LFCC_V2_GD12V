@@ -2,7 +2,7 @@
 .subckt driver_bootstrap Gate V5v0LS DIN V1v8 GND Source Vboot
 *.PININFO Gate:B V5v0LS:B DIN:B V1v8:B GND:B Source:B Vboot:B
 x3 Vboot V5v0LS SET RESET GND VFE VRE boot_ls_stage
-x2 V1v8 GND VFE DIN VRE pulse_generator
+x2 V1v8 GND VFE DIN VRE short_pulse_generator
 x1 Vboot Gate Source QN Q buffer
 x4 Vboot RESET QN Q Source nand_5v
 x5 Vboot SET Q QN Source nand_5v
@@ -33,20 +33,63 @@ XR5 net4 net8 GND sky130_fd_pr__res_xhigh_po_0p35 L=2.612 mult=1 m=1
 .ends
 
 
-* expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/pulse_generator.sym # of pins=5
-** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/pulse_generator.sym
-** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/pulse_generator.sch
-.subckt pulse_generator VCC VSS VFE VIN VRE
+* expanding   symbol:  /foss/designs/Open3LFCC_V2_GD12V/xschem/short_pulse_generator.sym # of pins=5
+** sym_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/short_pulse_generator.sym
+** sch_path: /foss/designs/Open3LFCC_V2_GD12V/xschem/short_pulse_generator.sch
+.subckt short_pulse_generator VCC VSS VFE VIN VRE
 *.PININFO VIN:B VFE:B VRE:B VCC:B VSS:B
-x1 net2 VSS VSS VCC VCC predly sky130_fd_sc_hd__inv_1
-x2 predly VSS VSS VCC VCC net3 sky130_fd_sc_hd__inv_1
-x3 dly8 VSS VSS VCC VCC net1 sky130_fd_sc_hd__inv_1
-x4 VIN VSS VSS VCC VCC net2 sky130_fd_sc_hd__inv_2
-x5 predly VSS VSS VCC VCC net4 sky130_fd_sc_hd__inv_8
-x6 net3 dly8 VSS VSS VCC VCC VFE sky130_fd_sc_hd__and2_2
-x7 net1 predly VSS VSS VCC VCC VRE sky130_fd_sc_hd__and2_2
-XC2 dly8 VSS sky130_fd_pr__cap_mim_m3_2 W=80 L=80 m=1
-x8 net4 VSS VSS VCC VCC dly8 sky130_fd_sc_hd__inv_8
+x3 net3 VSS VSS VCC VCC predly sky130_fd_sc_hd__inv_1
+x4 predly VSS VSS VCC VCC net2 sky130_fd_sc_hd__inv_1
+x5 dly8 VSS VSS VCC VCC net1 sky130_fd_sc_hd__inv_1
+x6 VIN VSS VSS VCC VCC net3 sky130_fd_sc_hd__inv_2
+x7 predly VSS VSS VCC VCC V_gatein sky130_fd_sc_hd__inv_8
+x8 net2 dly8 VSS VSS VCC VCC VFE sky130_fd_sc_hd__and2_2
+x9 net1 predly VSS VSS VCC VCC VRE sky130_fd_sc_hd__and2_2
+x2 dly7 VSS VSS VCC VCC dly8 sky130_fd_sc_hd__inv_1
+x10[0] V_gatein VSS VSS VCC VCC n2 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[1] n2 VSS VSS VCC VCC n3 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[2] n3 VSS VSS VCC VCC n4 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[3] n4 VSS VSS VCC VCC n5 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[4] n5 VSS VSS VCC VCC n6 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[5] n6 VSS VSS VCC VCC n7 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[6] n7 VSS VSS VCC VCC n8 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[7] n8 VSS VSS VCC VCC n9 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[8] n9 VSS VSS VCC VCC n10 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[9] n10 VSS VSS VCC VCC n11 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[10] n11 VSS VSS VCC VCC n12 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[11] n12 VSS VSS VCC VCC n13 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[12] n13 VSS VSS VCC VCC n14 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[13] n14 VSS VSS VCC VCC n15 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[14] n15 VSS VSS VCC VCC n16 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[15] n16 VSS VSS VCC VCC n17 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[16] n17 VSS VSS VCC VCC n18 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[17] n18 VSS VSS VCC VCC n19 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[18] n19 VSS VSS VCC VCC n20 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[19] n20 VSS VSS VCC VCC n21 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[20] n21 VSS VSS VCC VCC n22 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[21] n22 VSS VSS VCC VCC n23 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[22] n23 VSS VSS VCC VCC n24 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[23] n24 VSS VSS VCC VCC n25 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[24] n25 VSS VSS VCC VCC n26 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[25] n26 VSS VSS VCC VCC n27 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[26] n27 VSS VSS VCC VCC n28 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[27] n28 VSS VSS VCC VCC n29 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[28] n29 VSS VSS VCC VCC n30 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[29] n30 VSS VSS VCC VCC n31 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[30] n31 VSS VSS VCC VCC n32 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[31] n32 VSS VSS VCC VCC n33 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[32] n33 VSS VSS VCC VCC n34 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[33] n34 VSS VSS VCC VCC n35 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[34] n35 VSS VSS VCC VCC n36 sky130_fd_sc_hd__clkdlybuf4s50_2
+x10[35] n36 VSS VSS VCC VCC dly7 sky130_fd_sc_hd__clkdlybuf4s50_2
+**** begin user architecture code
+
+
+*.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice TT
+.include /foss/pdks/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+**** end user architecture code
 .ends
 
 

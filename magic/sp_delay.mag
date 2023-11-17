@@ -1,11 +1,12 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1700081908
+timestamp 1700230441
 << pwell >>
 rect 3 38 5681 195
 << locali >>
 rect 17 491 75 527
+rect 5609 491 5667 527
 rect 893 215 1089 257
 rect 1797 215 1993 257
 rect 2701 215 2897 257
@@ -13,6 +14,7 @@ rect 3605 215 3801 257
 rect 4509 215 4705 257
 rect 5413 215 5609 257
 rect 17 17 75 53
+rect 5609 17 5667 53
 << metal1 >>
 rect 0 496 5684 592
 rect 0 -48 5684 48

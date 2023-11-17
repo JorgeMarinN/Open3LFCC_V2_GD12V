@@ -149,7 +149,7 @@ label VBOOT north metal1
 # Short Pulse Generator
 # -------------------------------------
 set basex [expr {$basex+1.67}]
-box [expr {$basex-17}]um [expr {$basey+14}]um [expr {$basex-16}]um [expr {$basey+15}]um
+box [expr {$basex-16.7}]um [expr {$basey+14}]um [expr {$basex-15.7}]um [expr {$basey+15}]um
 getcell short_pulse_generator.mag
 rotate -90
 upsidedown
@@ -169,26 +169,26 @@ box [expr {$basex-16.5}]um [expr {$basey+2.32}]um [expr {$basex-14.5}]um [expr {
 paint metal3
 box [expr {$basex-16.4}]um [expr {$basey+2.42}]um [expr {$basex-14.6}]um [expr {$basey+2.72}]um
 paint m3contact
-box [expr {$basex-15}]um [expr {$basey+2.32}]um [expr {$basex-14.5}]um [expr {$basey+19}]um
+box [expr {$basex-15}]um [expr {$basey+2.32}]um [expr {$basex-14.5}]um [expr {$basey+17.4}]um
 paint metal3
-box [expr {$basex-15}]um [expr {$basey+18.5}]um [expr {$basex-12}]um [expr {$basey+19}]um
+box [expr {$basex-15}]um [expr {$basey+16.9}]um [expr {$basex-12}]um [expr {$basey+17.4}]um
 paint metal3
-box [expr {$basex-12.4}]um [expr {$basey+18.5}]um [expr {$basex-11.9}]um [expr {$basey+19}]um
+box [expr {$basex-12.4}]um [expr {$basey+16.9}]um [expr {$basex-11.9}]um [expr {$basey+17.4}]um
 paint {metal1, metal2, metal3}
-box [expr {$basex-12.3}]um [expr {$basey+18.6}]um [expr {$basex-12}]um [expr {$basey+18.9}]um
+box [expr {$basex-12.3}]um [expr {$basey+17}]um [expr {$basex-12}]um [expr {$basey+17.3}]um
 paint {m2contact, m3contact}
 
 box [expr {$basex-12.5}]um [expr {$basey+2.32}]um [expr {$basex-10.5}]um [expr {$basey+2.82}]um
 paint metal3
 box [expr {$basex-12.4}]um [expr {$basey+2.42}]um [expr {$basex-10.6}]um [expr {$basey+2.72}]um
 paint m3contact
-box [expr {$basex-11.5}]um [expr {$basey+2.32}]um [expr {$basex-11}]um [expr {$basey+25}]um
+box [expr {$basex-11.5}]um [expr {$basey+2.32}]um [expr {$basex-11}]um [expr {$basey+23.3}]um
 paint metal3
-box [expr {$basex-15.95}]um [expr {$basey+24.5}]um [expr {$basex-11}]um [expr {$basey+25}]um
+box [expr {$basex-15.5}]um [expr {$basey+22.8}]um [expr {$basex-11}]um [expr {$basey+23.3}]um
 paint metal3
-box [expr {$basex-15.95}]um [expr {$basey+24.6}]um [expr {$basex-15.45}]um [expr {$basey+25.1}]um
+box [expr {$basex-15.5}]um [expr {$basey+22.8}]um [expr {$basex-15}]um [expr {$basey+23.3}]um
 paint {metal1, metal2, metal3}
-box [expr {$basex-15.85}]um [expr {$basey+24.7}]um [expr {$basex-15.55}]um [expr {$basey+25}]um
+box [expr {$basex-15.4}]um [expr {$basey+22.9}]um [expr {$basex-15.1}]um [expr {$basey+23.2}]um
 paint {m2contact, m3contact}
 
 

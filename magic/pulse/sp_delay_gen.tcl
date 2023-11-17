@@ -1,46 +1,17 @@
 
 # #####################	#
 #   AC3E - UTFSM      	#
-#   Project:    	#
-#   Topmodule layout	#
-#   09-11-2023        	#
+#   Project: 3LFCC v.2	#
+#   SPG delay layout	#
+#   17-11-2023        	#
 # #####################	#
 
 drc style drc(full)
 
-if {0} {
-see no mvndiffusion
-see no mvpdiffusion
-see no mvndcontact
-see no mvpdcontact
-see no pcontact
-see no mvpsubstratepdiff
-see no mvnsubstratendiff
-see no mvpsubstratepcontact
-see no mvnsubstratencontact
-see no mvntransistor
-see no polysilicon
-see no locali
-see no viali
-see no metal1
-see no m2contact
-see no m3contact
-see no via3
-see no via4
-see no mimcap
-see no mimcap2
-see no mimcapcontact
-see no mimcap2contact
-}
+
+set cell_height 5.44
 
 box 0 0 0 0
-#load user_analog_project_wrapper_empty
-
-set up 2920
-set right 3520
-
-set cell_height 6.4
-
 getcell sp_delay2x.mag
 box 0 [expr $cell_height]um 0 [expr $cell_height]um
 getcell sp_delay2x.mag
@@ -48,36 +19,35 @@ box 0 [expr 2*$cell_height]um 0 [expr 2*$cell_height]um
 getcell sp_delay2x.mag
 
 #SIGNAL 1 and 2
-box [expr 2.615 - 1.5]um 4.875um [expr 2.615]um 5.085um
+box [expr 2.615 - 1.5]um 4.395um [expr 2.615]um 4.605um
 paint li
-box [expr 2.615 - 1.5]um [expr 4.875 + 2.84]um [expr 2.615]um [expr 5.085 + 2.84]um
+box [expr 2.615 - 1.5]um 6.755um [expr 2.615]um 6.965um
 paint li
-box [expr 2.615 - 1.5]um 4.875um [expr 2.615 - 1.2]um [expr 5.085 + 2.84]um
+box [expr 2.615 - 1.5]um 4.395um [expr 2.615 - 1.2]um 6.965um
 paint li
 
 #SIGNAL 2 and 3
-box [expr 2.615 - 1.5]um [expr 4.875 + 6.4]um [expr 2.615]um [expr 5.085 + 6.4]um
+box [expr 2.615 - 1.5]um 9.835um [expr 2.615]um 10.045um
 paint li
-box [expr 2.615 - 1.5]um [expr 4.875 + 2.84 + 6.4]um [expr 2.615]um [expr 5.085 + 2.84 + 6.4]um
+box [expr 2.615 - 1.5]um 12.195um [expr 2.615]um 12.405um
 paint li
-box [expr 2.615 - 1.5]um [expr 4.875 + 6.4]um [expr 2.615 - 1.2]um [expr 5.085 + 2.84 + 6.4]um
+box [expr 2.615 - 1.5]um 9.835um [expr 2.615 - 1.2]um 12.405um
 paint li
 
 
-#VSS
-box 30.11um 2.72um [expr 30.11 + 1.5]um [expr 3.68]um
+#VCC
+box 30.11um 2.72um [expr 30.11 + 1.5]um 3.2um
 paint m1
-box 30.11um 9.12um [expr 30.11 + 1.5]um [expr 9.12 + 0.96]um
+box 30.11um 8.16um [expr 30.11 + 1.5]um 8.64um
 paint m1
-box 30.11um 15.52um [expr 30.11 + 1.5]um [expr 15.52 + 0.96]um
+box 30.11um 13.6um [expr 30.11 + 1.5]um 14.08um
 paint m1
-box [expr 30.11 + 1.5]um 2.72um [expr 30.11 + 2]um [expr 15.52 + 0.96]um
+box [expr 30.11 + 1.5]um 2.72um [expr 30.11 + 2]um 14.08um
 paint m1
 
 
 #add labels
 
-box 0 0 0 0
 box [expr 0.335 + 1.5]um 1.885um [expr 0.505 + 1.5]um 2.055um
 paint li
 label VCC south li
@@ -93,7 +63,7 @@ paint li
 label VIN south li
 select area label
 port make
-box [expr 2.065]um 17.675um [expr 3.325]um 17.885um
+box 2.615um 15.275um 2.76um 15.48um
 paint li
 label VOUT south li
 select area label

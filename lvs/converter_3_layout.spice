@@ -3033,21 +3033,6 @@ X8 a_283_47# a_27_47# VGND VNB sky130_fd_pr__nfet_01v8 ad=0.172 pd=1.83 as=0.104
 X9 X a_390_47# VGND VNB sky130_fd_pr__nfet_01v8 ad=0.0578 pd=0.695 as=0.098 ps=0.98 w=0.42 l=0.15
 .ends
 
-.subckt sp_delay_rot VIN VOUT VCC VSS
-Xsky130_fd_sc_hd__clkdlybuf4s50_2_0 VIN VSS VCC sky130_fd_sc_hd__clkdlybuf4s50_2_1/A
-+ VSS VCC sky130_fd_sc_hd__clkdlybuf4s50_2
-Xsky130_fd_sc_hd__clkdlybuf4s50_2_1 sky130_fd_sc_hd__clkdlybuf4s50_2_1/A VSS VCC sky130_fd_sc_hd__clkdlybuf4s50_2_2/A
-+ VSS VCC sky130_fd_sc_hd__clkdlybuf4s50_2
-Xsky130_fd_sc_hd__clkdlybuf4s50_2_2 sky130_fd_sc_hd__clkdlybuf4s50_2_2/A VSS VCC sky130_fd_sc_hd__clkdlybuf4s50_2_3/A
-+ VSS VCC sky130_fd_sc_hd__clkdlybuf4s50_2
-Xsky130_fd_sc_hd__clkdlybuf4s50_2_3 sky130_fd_sc_hd__clkdlybuf4s50_2_3/A VSS VCC sky130_fd_sc_hd__clkdlybuf4s50_2_4/A
-+ VSS VCC sky130_fd_sc_hd__clkdlybuf4s50_2
-Xsky130_fd_sc_hd__clkdlybuf4s50_2_4 sky130_fd_sc_hd__clkdlybuf4s50_2_4/A VSS VCC sky130_fd_sc_hd__clkdlybuf4s50_2_5/A
-+ VSS VCC sky130_fd_sc_hd__clkdlybuf4s50_2
-Xsky130_fd_sc_hd__clkdlybuf4s50_2_5 sky130_fd_sc_hd__clkdlybuf4s50_2_5/A VSS VCC VOUT
-+ VSS VCC sky130_fd_sc_hd__clkdlybuf4s50_2
-.ends
-
 .subckt sp_delay sky130_fd_sc_hd__clkdlybuf4s50_2_0/A sky130_fd_sc_hd__clkdlybuf4s50_2_5/X
 + sky130_fd_sc_hd__tap_1_1/VPB VSUBS
 Xsky130_fd_sc_hd__clkdlybuf4s50_2_0 sky130_fd_sc_hd__clkdlybuf4s50_2_0/A VSUBS sky130_fd_sc_hd__tap_1_1/VPB
@@ -3065,8 +3050,8 @@ Xsky130_fd_sc_hd__clkdlybuf4s50_2_5 sky130_fd_sc_hd__clkdlybuf4s50_2_5/A VSUBS s
 .ends
 
 .subckt sp_delay2x VIN VOUT VSS VCC
-Xsp_delay_rot_0 sp_delay_rot_0/VIN VOUT VCC VSS sp_delay_rot
-Xsp_delay_0 VIN sp_delay_rot_0/VIN VCC VSS sp_delay
+Xsp_delay_0 VIN sp_delay_1/sky130_fd_sc_hd__clkdlybuf4s50_2_0/A VCC VSS sp_delay
+Xsp_delay_1 sp_delay_1/sky130_fd_sc_hd__clkdlybuf4s50_2_0/A VOUT VCC VSS sp_delay
 .ends
 
 .subckt sp_delay_top VCC VIN VOUT VSS
@@ -3117,8 +3102,8 @@ X2 NAND A a_n29_n1168# VSS sky130_fd_pr__nfet_g5v0d10v5 ad=1.45 pd=10.6 as=0.725
 X3 VDD A NAND VDD sky130_fd_pr__pfet_g5v0d10v5 ad=1.45 pd=10.6 as=0.725 ps=5.29 w=5 l=3
 .ends
 
-.subckt driver_bootstrap buffer_0/out boot_ls_stage_0/V5v0LS w_n3969_322# short_pulse_generator_0/VCC
-+ VBOOT VSUBS VSource
+.subckt driver_bootstrap buffer_0/out boot_ls_stage_0/V5v0LS w_n3969_322# VBOOT VSUBS
++ short_pulse_generator_0/VCC VSource
 Xboot_ls_stage_0 w_n3969_322# boot_ls_stage_0/VRE VBOOT nand_5v_1/A boot_ls_stage_0/V5v0LS
 + nand_5v_0/A boot_ls_stage_0/VFE VSUBS boot_ls_stage
 Xbuffer_0 nand_5v_1/B buffer_0/out buffer_0/Q VBOOT VSource buffer
@@ -3133,7 +3118,7 @@ Xlevel_shifter_0 V1v8 V5v0LS VSS power_stage_3_0/s1 level_shifter
 Xpower_stage_3_0 VDD VDD Vout VDD power_stage_3_0/s2 power_stage_3_0/s1 VSS power_stage_3
 Xmimcap_210x420_0 Vboot Vout Vout mimcap_210x420
 Xbootstrap_diode_0 Vboot V5v0LS bootstrap_diode
-Xdriver_bootstrap_0 power_stage_3_0/s2 V5v0LS w_113334_n12600# V1v8 Vboot VSS Vout
+Xdriver_bootstrap_0 power_stage_3_0/s2 V5v0LS w_113334_n12600# Vboot VSS V1v8 Vout
 + driver_bootstrap
 .ends
 

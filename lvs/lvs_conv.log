@@ -318,8 +318,7 @@ Flattening unmatched subcell pulse_generator in circuit driver_bootstrap (0)(1 i
 Flattening unmatched subcell short_pulse_generator in circuit driver_bootstrap (1)(1 instance)
 Flattening unmatched subcell sp_delay_top in circuit driver_bootstrap (1)(1 instance)
 Flattening unmatched subcell sp_delay2x in circuit driver_bootstrap (1)(3 instances)
-Flattening unmatched subcell sp_delay_rot in circuit driver_bootstrap (1)(3 instances)
-Flattening unmatched subcell sp_delay in circuit driver_bootstrap (1)(3 instances)
+Flattening unmatched subcell sp_delay in circuit driver_bootstrap (1)(6 instances)
 
 Subcircuit summary:
 Circuit 1: driver_bootstrap                |Circuit 2: driver_bootstrap                

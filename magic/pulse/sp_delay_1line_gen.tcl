@@ -6,42 +6,10 @@
 #   09-11-2023        	#
 # #####################	#
 
-set mod_x 1058.965
-set mod_y 2807.515
-
-
 drc style drc(full)
-
-if {0} {
-see no mvndiffusion
-see no mvpdiffusion
-see no mvndcontact
-see no mvpdcontact
-see no pcontact
-see no mvpsubstratepdiff
-see no mvnsubstratendiff
-see no mvpsubstratepcontact
-see no mvnsubstratencontact
-see no mvntransistor
-see no polysilicon
-see no locali
-see no viali
-see no metal1
-see no m2contact
-see no m3contact
-see no via3
-see no via4
-see no mimcap
-see no mimcap2
-see no mimcapcontact
-see no mimcap2contact
-}
 
 box 0 0 0 0
 #load user_analog_project_wrapper_empty
-
-set up 2920
-set right 3520
 
 set w_tap_cell 0.84
 set w_dly_cell 4.52
@@ -88,6 +56,10 @@ paint li
 box 0.085um 0.085um 0.375um  0.265um
 paint li
 box 0.085um 2.455um 0.375um  2.635um
+paint li
+box 28.045um 0.085um 28.335um  0.265um
+paint li
+box 28.045um 2.455um 28.335um  2.635um
 paint li
 
 #complete pwell

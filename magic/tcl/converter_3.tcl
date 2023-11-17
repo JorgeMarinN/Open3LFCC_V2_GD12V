@@ -3,7 +3,7 @@
 #   AC3E - UTFSM      	#
 #   Project: 3LFCC v.2 	#
 #   Buck Converter		#
-#   15-11-2023        	#
+#   17-11-2023        	#
 # #####################	#
 
 drc style drc(full)
@@ -146,7 +146,7 @@ paint m2contact
 box 558um -230um 560um -50um
 paint metal2
 # V1v8
-box 46um -226um 586um -224um
+box 46um -226um 585um -224um
 paint metal1
 box 46.1um -35.9um 47.9um -34.1um
 paint m2contact
@@ -154,11 +154,11 @@ box 46.1um -225.9um 47.9um -224.1um
 paint m2contact
 box 46um -226um 48um -34um
 paint metal2
-box 584.1um -225.9um 585.9um -224.1um
+box 583.1um -225.9um 584.9um -224.1um
 paint m2contact
-box 584um -226um 586um -56.515um
+box 583um -226um 585um -56.635um
 paint metal2
-box 584.1um -57.335um 585.9um -56.615um
+box 583.1um -57.015um 584.9um -56.735um
 paint m2contact
 
 # V5v0LS
